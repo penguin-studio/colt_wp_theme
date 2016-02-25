@@ -10,4 +10,4 @@ define('colt_theme_settings_directory',get_template_directory() . '/colt_theme_s
 define('colt_theme_settings_directory_uri',get_template_directory_uri() . '/colt_theme_settings');
 
 //Подключаем файл настроек страницы Настроек темы в админке
-require $colt_theme_settings_directory . '/admin/admin_settings.php';
+require colt_theme_settings_directory . '/admin/admin_settings.php';
