@@ -11,9 +11,10 @@
 				$favicon_attributes = wp_get_attachment_image_src( $options['favicon'], 'full' );
 				$favicon_src = $favicon_attributes[0];
 				?>
-				<link rel="icon" type="image/vnd.microsoft.icon" href="<?php echo $favicon_src;?>">
+			<link rel="icon" type="image/vnd.microsoft.icon" href="<?php echo $favicon_src;?>">
 			<?php endif;?>
 			<!-- style start -->
+
 			<!-- style end -->
 
 	<?php wp_head(); ?>
