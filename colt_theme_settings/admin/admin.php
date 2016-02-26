@@ -7,7 +7,7 @@
 
 //Добавление стилей для админки
 function colt_theme_admin_enqueue_options_style() {
-    wp_enqueue_style( 'colt_theme_admin_options_style', colt_theme_settings_directory_uri . '/admin/style/style.css' );
+    wp_enqueue_style( 'colt_theme_admin_options_style', colt_theme_settings_directory_uri . '/admin/css/style.css' );
 }
 add_action( 'admin_enqueue_scripts', 'colt_theme_admin_enqueue_options_style' );
 
@@ -20,5 +20,6 @@ function colt_theme_admin_js() {
 }
 add_action( 'admin_enqueue_scripts', 'colt_theme_admin_js' );
 
-require colt_theme_settings_directory . '/admin/template.php';
-require colt_theme_settings_directory . '/admin/function.php';
+//Подключение php файлов
+require colt_theme_settings_directory . '/include/admin/template.php';
+require colt_theme_settings_directory . '/include/admin/function.php';
