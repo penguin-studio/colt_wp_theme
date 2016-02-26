@@ -71,6 +71,41 @@ function theme_settings_page() {
 
                         </section>
                         <section id="content2">
+                            <table class="theme-option-table table-block" >
+                                <tr>
+                                    <td>Адрес</td>
+                                    <td><input type="text" name="theme_settings[contacts_adres]" placeholder="Введите адрес" value="<?php echo esc_attr(tf_variable_exist($options['contacts_adres'])); ?>" style="width: 400px;" ></td>
+                                </tr>
+                            </table>
+                            <table class="theme-option-table table-block" >
+                            <tr>
+                                <td>График роботи</td>
+                                <td><input type="text" name="theme_settings[contacts_shedule]" placeholder="График роботи" value="<?php echo esc_attr(tf_variable_exist($options['contacts_schedule'])); ?>" style="width: 600px;" ></td>
+                            </tr>
+                            </table>
+                            <table class="theme-option-table table-block" >
+                                <tr>
+                                    <td>Електронный адрес</td>
+                                    <td><input type="text" name="theme_settings[contacts_email]" value="<?php echo esc_attr(tf_variable_exist($options['contacts_email'])); ?>" style="width: 400px;" ></td>
+                                </tr>
+                            </table>
+                            <table id="add-field-area" class="theme-option-table table-block" >
+                                <thead>
+                                <th colspan="2"><input type="text" id="phone_number" style="width: 300px;" placeholder="Номер телефона">
+                                <input type="button" id="add_phone_button" value="Добавить телефон"></th>
+                                </thead>
+                                <?php
+                                    foreach($options['contacts_phone'] as $key=>$phone):
+                                ?>
+                                        <tr id="ph<?php echo esc_html($key); ?>" class="phone">
+                                        <td colspan="2"><input type="text" name="theme_settings[contacts_phone][]" value="<?php echo esc_html($phone); ?>" style="width: 300px;" placeholder="Номер телефона">
+                                           <input type="button" id="delete-number" phone-id="<?php echo esc_html($key); ?>" value="Удалить телефон"></td>
+                                        </tr>
+                                <?php
+                                    endforeach;
+                                ?>
+
+                            </table>
                             <table class="theme-option-table">
                                 <tr valign="top"><td colspan='2'><h1>Социальные сети</h1></td></tr>
                             </table>
@@ -100,29 +135,6 @@ function theme_settings_page() {
                                     <td><input type="checkbox" name="theme_settings[social_twitter_visible]" value="1" <?php checked(tf_variable_exist($options['social_twitter_visible']),'1'); ?>></td>
                                     <td><input type="text" name="theme_settings[social_twitter_url]" value="<?php echo esc_attr(tf_variable_exist($options['social_twitter_url'])); ?>" style="width: 400px;" ></td>
                                 </tr>
-                            </table>
-                            <table class="theme-option-table table-block" >
-                                <tr>
-                                    <td>Електронный адрес</td>
-                                    <td><input type="text" name="theme_settings[contacts_email]" value="<?php echo esc_attr(tf_variable_exist($options['contacts_email'])); ?>" style="width: 400px;" ></td>
-                                </tr>
-                            </table>
-                            <table id="add-field-area" class="theme-option-table table-block" >
-                                <thead>
-                                <th colspan="2"><input type="text" id="phone_number" style="width: 300px;" placeholder="Номер телефона">
-                                <input type="button" id="add_phone_button" value="Добавить телефон"></th>
-                                </thead>
-                                <?php
-                                    foreach($options['contacts_phone'] as $key=>$phone):
-                                ?>
-                                        <tr id="ph<?php echo esc_html($key); ?>" class="phone">
-                                        <td colspan="2"><input type="text" name="theme_settings[contacts_phone][]" value="<?php echo esc_html($phone); ?>" style="width: 300px;" placeholder="Номер телефона">
-                                           <input type="button" id="delete-number" phone-id="<?php echo esc_html($key); ?>" value="Удалить телефон"></td>
-                                        </tr>
-                                <?php
-                                    endforeach;
-                                ?>
-
                             </table>
                         </section>
                         <section id="content3">

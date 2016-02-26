@@ -5,9 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
-	<?php
-	$options = get_option( 'theme_settings' );
-	?>
+	<?php $options = get_option( 'theme_settings' ); ?>
 	<?php if(tf_variable_exist($options['favicon'])):?>
 		<?php $favicon_url = wp_get_attachment_image_url( $options['favicon'], 'full' ); ?>
 	<link rel="icon" type="image/vnd.microsoft.icon" href="<?php echo esc_url($favicon_url);?>">
@@ -76,5 +74,8 @@
 			</div>
 		</div>
 	</header>
+	<?php if(is_front_page()): ?>
 
+	<?php endif; ?>
+	<section class="main">
 

@@ -1,6 +1,8 @@
 $ = jQuery;
 $(document).ready(function() {
-
+    /**
+     * Функция отвечает за динамическое добавление телефона
+     */
     var add_phone_field = function(){
 
         var find_phone_field = $("table#add-field-area").find("tr.phone:last");
@@ -29,12 +31,22 @@ $(document).ready(function() {
         }
 
     }
-    
+
+    /**
+     * Функция отвечает за динамическое удаления телефона
+     */
     var delete_phone_number = function (id) {
         $("tr#ph"+id).remove();
     }
-    
+
+    /**
+     * Событие нажатия на кнопку добавления телефона
+     */
     $('input#add_phone_button').click(add_phone_field);
+
+    /**
+     * Событие нажатия на кнопку удаления телефона
+     */
     $('input#delete-number').bind('click',function () {
         id = $(this).attr('phone-id');
         if(confirm('Удалить номер телефона')){
