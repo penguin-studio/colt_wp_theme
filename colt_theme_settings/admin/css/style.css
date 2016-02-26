@@ -18,6 +18,16 @@
     margin: 0;
     padding-top: 3px;
 }
+.theme-option-table.social tr{
+    border: 1px solid #ccc;
+}
+.theme-option-table th{
+    text-align: left;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
 .theme-option-main-block #title{
     width: 60%;
     padding: 20px 30px;

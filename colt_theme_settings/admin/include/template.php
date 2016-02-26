@@ -45,7 +45,7 @@ function theme_settings_page() {
                                     <td>
                                         <h3>Логотип:</h3>
                                         <?php
-                                        echo tf_img_upload('theme_settings[logo_uri]', tf_variable_exist($options['logo_uri']));
+                                        echo tf_img_upload('theme_settings[logo]', tf_variable_exist($options['logo']));
                                         ?>
                                     </td>
                                 </tr>
@@ -67,6 +67,36 @@ function theme_settings_page() {
 
 
 
+                            </table>
+                            <table class="theme-option-table">
+                                <tr valign="top"><td colspan='2'><h1>Социальные сети</h1></td></tr>
+                            </table>
+                            <table class="theme-option-table table-block social" >
+                                <thead>
+                                 <th>Название</th>
+                                 <th>Состояние </th>
+                                 <th>Ссылка</th>
+                                </thead>
+                                <tr>
+                                    <td>Вконтакте</td>
+                                    <td><input type="checkbox" name="theme_settings[social_vk_visible]" value="1" <?php checked(tf_variable_exist($options['social_vk_visible']),'1'); ?>></td>
+                                    <td><input type="text" name="theme_settings[social_vk_url]" value="<?php echo esc_attr(tf_variable_exist($options['social_vk_url'])); ?>" style="width: 400px;" ></td>
+                                </tr>
+                                <tr>
+                                    <td>Facebook</td>
+                                    <td><input type="checkbox" name="theme_settings[social_facebook_visible]" value="1" <?php checked(tf_variable_exist($options['social_facebook_visible']),'1'); ?>></td>
+                                    <td><input type="text" name="theme_settings[social_facebook_url]" value="<?php echo esc_attr(tf_variable_exist($options['social_facebook_url'])); ?>" style="width: 400px;" ></td>
+                                </tr>
+                                <tr>
+                                    <td>Instagram</td>
+                                    <td><input type="checkbox" name="theme_settings[social_instagram_visible]" value="1" <?php checked(tf_variable_exist($options['social_instagram_visible']),'1'); ?>></td>
+                                    <td><input type="text" name="theme_settings[social_instagram_url]" value="<?php echo esc_attr(tf_variable_exist($options['social_instagram_url'])); ?>" style="width: 400px;" ></td>
+                                </tr>
+                                <tr>
+                                    <td>Twitter</td>
+                                    <td><input type="checkbox" name="theme_settings[social_twitter_visible]" value="1" <?php checked(tf_variable_exist($options['social_twitter_visible']),'1'); ?>></td>
+                                    <td><input type="text" name="theme_settings[social_twitter_url]" value="<?php echo esc_attr(tf_variable_exist($options['social_twitter_url'])); ?>" style="width: 400px;" ></td>
+                                </tr>
                             </table>
                         </section>
                         <section id="content2">
