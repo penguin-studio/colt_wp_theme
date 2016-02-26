@@ -43,10 +43,22 @@
 			<div class="header-nav-bar-left">
 				<nav class="nav__social">
 					<ul class="nav__social-list">
-						<li><a class="fa fa-vk" href="#"></a></li>
-						<li><a class="fa fa-facebook" href="#"></a></li>
-						<li><a class="fa fa-instagram" href="#"></a></li>
-						<li><a class="fa fa-twitter" href="#"></a></li>
+						<?php if(tf_variable_exist($options['social_vk_visible']) && $options['social_vk_visible'] == '1' &&
+							$options['social_vk_url'] != ''):?>
+							<li><a class="fa fa-vk" href="<?php echo esc_url($options['social_vk_url']);?>"></a></li>
+						<?php endif; ?>
+						<?php if(tf_variable_exist($options['social_facebook_visible']) && $options['social_facebook_visible'] == '1' &&
+							$options['social_facebook_url'] != ''):?>
+							<li><a class="fa fa-facebook" href="<?php echo esc_url($options['social_facebook_url']);?>"></a></li>
+						<?php endif; ?>
+						<?php if(tf_variable_exist($options['social_instagram_visible']) && $options['social_instagram_visible'] == '1' &&
+							$options['social_instagram_url'] != ''):?>
+							<li><a class="fa fa-instagram" href="<?php echo esc_url($options['social_instagram_url']);?>"></a></li>
+						<?php endif; ?>
+						<?php if(tf_variable_exist($options['social_twitter_visible']) && $options['social_twitter_visible'] == '1' &&
+							$options['social_twitter_url'] != ''):?>
+							<li><a class="fa fa-twitter" href="<?php echo esc_url($options['social_twitter_url']);?>"></a></li>
+						<?php endif; ?>
 					</ul>
 				</nav>
 			</div>
@@ -57,7 +69,7 @@
 		}
 		?>
 		<div class="header-logo">
-			<a href="<?php echo get_home_url(); ?>"><img src="<?php echo esc_url($logo_url);?>" height="222" width="222" alt="logo" title="logo"></a>
+			<a href="<?php echo get_home_url(); ?>"><img src="<?php echo esc_url($logo_url);?>" height="222" width="222" alt="logo" title="<?php echo bloginfo('name')?>"></a>
 		</div>
 			<div class="header-nav-bar-right">
 
