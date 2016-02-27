@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
-	<?php $options = get_option( 'theme_settings' ); ?>
+	<?php global $post; $options = get_option( 'theme_settings' ); ?>
 	<?php if(tf_variable_exist($options['favicon'])):?>
 		<?php $favicon_url = wp_get_attachment_image_url( $options['favicon'], 'full' ); ?>
 	<link rel="icon" type="image/vnd.microsoft.icon" href="<?php echo esc_url($favicon_url);?>">
@@ -59,6 +59,30 @@
 						<?php endif; ?>
 					</ul>
 				</nav>
+				<nav class="header-nav__left">
+					<ul class="header-nav">
+						<?php if($options['menu_left_side']): ?>
+							<?php
+							$menu_items = wp_get_nav_menu_items($options['menu_left_side']);
+							$current_page_url = get_permalink($post->ID);
+
+							if($menu_items):
+								foreach ($menu_items as $item):
+									$active = "";
+									if(strcmp($item->url,$current_page_url ) == 0){
+										$active = 'class="active"';
+									}
+									?>
+									<li>
+										<a <?php echo $active; ?> href="<?php echo esc_url($item->url); ?>"><?php echo esc_html($item->title); ?></a>
+									</li>
+								<?php endforeach;	?>
+								<?php
+							endif;
+						endif;
+						?>
+					</ul>
+				</nav>
 			</div>
 		<?php
 		$logo_url = $theme_path_uri.'/img/default_logo.png';
@@ -70,7 +94,34 @@
 			<a href="<?php echo get_home_url(); ?>"><img src="<?php echo esc_url($logo_url);?>" height="222" width="222" alt="logo" title="<?php echo bloginfo('name')?>"></a>
 		</div>
 			<div class="header-nav-bar-right">
+				<?php if(tf_variable_exist($options['contacts_schedule'])):?>
+				<p class="schedule"><?php echo esc_html($options['contacts_schedule']); ?></p>
+				<?php endif; ?>
+				<a class="header-check" href="#">Запис онлайн</a>
+				<nav class="header-nav__right">
+					<ul class="header-nav">
+						<?php if($options['menu_left_side']): ?>
+							<?php
+							$menu_items = wp_get_nav_menu_items($options['menu_right_side']);
+							$current_page_url = get_permalink($post->ID);
 
+							if($menu_items):
+								foreach ($menu_items as $item):
+									$active = "";
+									if(strcmp($item->url,$current_page_url ) == 0){
+										$active = 'class="active"';
+									}
+									?>
+									<li>
+										<a <?php echo $active; ?> href="<?php echo esc_url($item->url); ?>"><?php echo esc_html($item->title); ?></a>
+									</li>
+								<?php endforeach;	?>
+								<?php
+							endif;
+						endif;
+						?>
+					</ul>
+				</nav>
 			</div>
 		</div>
 	</header>

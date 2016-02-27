@@ -3,8 +3,7 @@
 // подключение меню
 add_action('after_setup_theme', function(){
     register_nav_menus( array(
-        'header_menu_left_side' => 'Меню в шапке левое',
-        'header_menu_right_side' => 'Меню в шапке правое'
+        'header_menu' => 'Меню в шапке'
     ) );
 });
 // подключение меню конец

@@ -3,8 +3,12 @@
             <footer class="footer main-blocks">
                 <div class="row">
                     <div class="col-md-4">
-                        <p class="footer-address">Вул. Михайловська, буд. 13</p>
-                        <p class="footer-schedule">Графік роботи: 10:00 — 21:00 без вихідних</p>
+                        <?php if(tf_variable_exist($options['contacts_adres'])):?>
+                        <p class="footer-address"><?php echo esc_html($options['contacts_adres']); ?></p>
+                        <?php endif; ?>
+                        <?php if(tf_variable_exist($options['contacts_schedule'])):?>
+                        <p class="footer-schedule"><?php echo esc_html($options['contacts_schedule']); ?></p>
+                        <?php endif; ?>
                     </div>
                     <div class="col-md-4">
                         <ul class="contact-us">

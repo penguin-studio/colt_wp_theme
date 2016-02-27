@@ -68,6 +68,43 @@ function theme_settings_page() {
 
 
                             </table>
+                            <table class="theme-option-table">
+                                <tr valign="top"><td colspan='2'><h1>Настройка верхнего меню</h1></td></tr>
+                            </table>
+                            <?php
+                                $args = array( 'hide_empty' => false, 'orderby' => 'name' );
+                                $menus = wp_get_nav_menus( $args );
+                            ?>
+                            <table class="theme-option-table table-block" >
+                                <td>Левая половина меню
+
+                                    <select name="theme_settings[menu_left_side]">
+                                        <option value="-1" >Не выбрано</option>
+                                    <?php if($menus):?>
+                                        <?php foreach($menus as $item): ?>
+                                            <option value="<?php echo esc_attr($item->term_id);?>" <?php selected($item->term_id,$options['menu_left_side'] ); ?>>
+                                                <?php echo esc_html($item->name);?>
+                                            </option>
+                                        <?php endforeach; ?>
+                                    <?php endif; ?>
+                                    </select>
+                                </td>
+                            </table>
+                            <table class="theme-option-table table-block" >
+                                <td>Правая половина меню
+
+                                    <select name="theme_settings[menu_right_side]">
+                                    <option value="-1" >Не выбрано</option>
+                                    <?php if($menus):?>
+                                        <?php foreach($menus as $item): ?>
+                                            <option value="<?php echo esc_attr($item->term_id);?>" <?php selected($item->term_id,$options['menu_right_side'] ); ?>>
+                                                <?php echo esc_html($item->name);?>
+                                            </option>
+                                        <?php endforeach; ?>
+                                    <?php endif; ?>
+                                    </select>
+                                </td>
+                            </table>
 
                         </section>
                         <section id="content2">
@@ -80,7 +117,7 @@ function theme_settings_page() {
                             <table class="theme-option-table table-block" >
                             <tr>
                                 <td>График роботи</td>
-                                <td><input type="text" name="theme_settings[contacts_shedule]" placeholder="График роботи" value="<?php echo esc_attr(tf_variable_exist($options['contacts_schedule'])); ?>" style="width: 600px;" ></td>
+                                <td><input type="text" name="theme_settings[contacts_schedule]" placeholder="График роботи" value="<?php echo esc_attr(tf_variable_exist($options['contacts_schedule'])); ?>" style="width: 600px;" ></td>
                             </tr>
                             </table>
                             <table class="theme-option-table table-block" >
