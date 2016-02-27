@@ -126,7 +126,32 @@
 		</div>
 	</header>
 	<?php if(is_front_page()): ?>
-
+		<section class="slider">
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<img src="<?php echo esc_url($theme_path_uri); ?>/img/slider/1.jpg" alt="...">
+					</div>
+					<div class="item">
+						<img src="<?php echo esc_url($theme_path_uri); ?>/img/slider/1.jpg" alt="...">
+					</div>
+					<div class="item">
+						<img src="<?php echo esc_url($theme_path_uri); ?>/img/slider/1.jpg" alt="...">
+					</div>
+				</div>
+				<!-- Controls -->
+				<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+			<a href="#about_us" class="go-to-down"><span class="go-to-down__nav glyphicon glyphicon-menu-down"></span></a>
+		</section>
 	<?php endif; ?>
 	<section class="main">
 
