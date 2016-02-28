@@ -115,6 +115,15 @@ function theme_settings_page() {
                                 </tr>
                             </table>
                             <table class="theme-option-table table-block" >
+                                <tr>
+                                    <td>Карта Google maps</td>
+                                    <td>Широта: <input type="text" name="theme_settings[maps_lat]" placeholder="Введите широту" value="<?php echo esc_attr(tf_variable_exist($options['maps_lat'])); ?>" style="width: 250px;" ></td>
+                                    <td>Долгота: <input type="text" name="theme_settings[maps_lng]" placeholder="Введите долготу" value="<?php echo esc_attr(tf_variable_exist($options['maps_lng'])); ?>" style="width: 250px;" ></td>
+                                    <td>Зум: <input type="text" name="theme_settings[maps_zoom]" placeholder="Зум" value="<?php echo esc_attr(tf_variable_exist($options['maps_zoom'])); ?>" style="width: 80px;" ></td>
+                                    <td>Маркер <?php echo tf_img_upload('theme_settings[maps_marker]', tf_variable_exist($options['maps_marker']), 40); ?> </td>
+                                </tr>
+                            </table>
+                            <table class="theme-option-table table-block" >
                             <tr>
                                 <td>График роботи</td>
                                 <td><input type="text" name="theme_settings[contacts_schedule]" placeholder="График роботи" value="<?php echo esc_attr(tf_variable_exist($options['contacts_schedule'])); ?>" style="width: 600px;" ></td>

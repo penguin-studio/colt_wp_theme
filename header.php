@@ -13,7 +13,7 @@
 
 	<!-- style start -->
 	<?php
-		$theme_path_uri = get_template_directory_uri()
+		$theme_path_uri = get_template_directory_uri();
 	?>
 	<link rel="stylesheet" href="<?php echo esc_url($theme_path_uri); ?>/css/style.css">
 	<link rel="stylesheet" href="<?php echo esc_url($theme_path_uri); ?>/css/bootstrap.min.css">
