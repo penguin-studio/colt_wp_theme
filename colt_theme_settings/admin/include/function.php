@@ -58,3 +58,52 @@ function tf_img_upload($name, $value = '', $w = 115, $h = 'auto') {
 function tf_variable_exist($variable){
     return isset($variable)?$variable:'';
 }
+
+/**
+ * @param $name атрибут name елемента
+ * @param $value выбраное значение
+ * @param string $parent_name имя родительской страницы
+ * @return string список страниц
+ *
+ * Функция отвечает за вывод выпадающего списка страниц
+ */
+function tf_view_pages($name, $value, $parent_name = ''){
+
+    $args = "";
+    $page_id = -1;
+    $pages = get_pages();
+    if($parent_name != ''){
+        foreach ( $pages as $page ) {
+            if(strcmp($page->post_name, $parent_name) == 0){
+                $page_id = $page->ID;
+                $args = array(
+                    'child_of' => $page_id,
+                    'hierarchical' => 0
+                );
+                break;
+            }
+        }
+    }
+    $select = '';
+    if(strcmp($value,  '') == 0){
+        $select = 'select = "selected"';
+    }
+    $option = '<option value="" '.$select.'>Не выбрано</option>';
+
+    $pages = get_pages($args);
+    foreach ( $pages as $page ) {
+        $select = '';
+        if(strcmp($value,  $page->post_name) == 0){
+            $select = 'selected = "selected"';
+        }
+        $option .= '<option '.$select.' value="' .$page->post_name. '">';
+        $option .= $page->post_title.' / '.$page->post_name;
+        $option .= '</option>';
+    }
+
+    return '
+    <select name="'.$name.'">
+      '.$option.'
+    </select>
+  ';
+}

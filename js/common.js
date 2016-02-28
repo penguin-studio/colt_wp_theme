@@ -27,5 +27,7 @@
         item: 3,
         controls: false
     });
+
+    //Инициализация слайдера главной страницы
     $(".carousel-inner").find('.item').filter(':first').addClass('active');
 })();
