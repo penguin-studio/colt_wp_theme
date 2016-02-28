@@ -79,4 +79,62 @@ $(document).ready(function() {
         return false;
     });
 
+    /**
+     * Функция отвечает за динамическое добавление услуги
+     */
+    var add_service_field = function(){
+
+        var find_service_field = $("table#add-service-field-area").find("tr.service:last");
+        var service_name = $('#service_name').val();
+        var service_price = $('#service_price').val();
+
+
+        if(service_name != '') {
+            var service_block_number = 0;
+            if(find_service_field.length != 0){
+                service_block_number = parseInt(find_service_field.attr("id").slice(1)) + 1;
+            }
+            $("table#add-service-field-area").append(
+                '<tr id="s'+service_block_number+'" class="service">' +
+                '<td>'+(service_block_number+1)+'</td>' +
+                '<td><input type="text" name="services[service]['+service_block_number+'][]" value="'+service_name+'" style="width: 300px;" placeholder="Название услуги"></td>' +
+                '<td><input type="text" name="services[service]['+service_block_number+'][]" value="'+service_price+'" style="width: 300px;" placeholder="Цена услуги"></td>' +
+                '<td><input type="button" id="delete-service" s-id="'+service_block_number+'" value="Удалить услугу"></td>' +
+                '</tr>'
+            );
+            $('input#delete-service').unbind();
+            $('input#delete-service').bind('click',function () {
+                id = $(this).attr('s-id');
+                if(confirm('Удалить услугу ?')){
+                    delete_service(id);
+                }
+            });
+            $('#service_name').val('');
+            $('#service_price').val('');
+        }
+
+    }
+
+    /**
+     * Функция отвечает за динамическое удаления услуги
+     */
+    var delete_service = function (id) {
+        $("tr#s"+id).remove();
+    }
+
+    /**
+     * Событие нажатия на кнопку добавления услуги
+     */
+    $('input#add_service_button').click(add_service_field);
+
+    /**
+     * Событие нажатия на кнопку удаления услуги
+     */
+    $('input#delete-service').bind('click',function () {
+        id = $(this).attr('s-id');
+        if(confirm('Удалить услугу')){
+            delete_service(id);
+        }
+    });
+
 });

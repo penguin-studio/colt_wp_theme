@@ -96,7 +96,7 @@ function tf_view_pages($name, $value, $parent_name = ''){
         if(strcmp($value,  $page->post_name) == 0){
             $select = 'selected = "selected"';
         }
-        $option .= '<option '.$select.' value="' .$page->post_name. '">';
+        $option .= '<option '.$select.' value="' .get_permalink($page->ID). '">';
         $option .= $page->post_title.' / '.$page->post_name;
         $option .= '</option>';
     }

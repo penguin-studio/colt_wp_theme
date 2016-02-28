@@ -14,7 +14,7 @@ function theme_settings_page() {
         </div>
     <?php endif; ?>
     <div class="theme-option-main-block">
-
+        <br>
         <div>
 
             <form method="post" action="options.php">
@@ -48,8 +48,6 @@ function theme_settings_page() {
                                         echo tf_img_upload('theme_settings[logo]', tf_variable_exist($options['logo']));
                                         ?>
                                     </td>
-                                </tr>
-                                <tr valign="top">
                                     <td>
                                         <h3>Фавикон:</h3>
                                         <?php
@@ -57,8 +55,6 @@ function theme_settings_page() {
                                         ?>
                                     </td>
                                 </tr>
-
-
                             </table>
                             <table class="theme-option-table">
                                 <tr valign="top"><td colspan='2'><h1>Настройка подвала сайта</h1></td></tr>
@@ -141,6 +137,7 @@ function theme_settings_page() {
                                 <input type="button" id="add_phone_button" value="Добавить телефон"></th>
                                 </thead>
                                 <?php
+                                 if(tf_variable_exist($options['contacts_phone'])):
                                     foreach($options['contacts_phone'] as $key=>$phone):
                                 ?>
                                         <tr id="ph<?php echo esc_html($key); ?>" class="phone">
@@ -149,6 +146,7 @@ function theme_settings_page() {
                                         </tr>
                                 <?php
                                     endforeach;
+                                 endif;
                                 ?>
 
                             </table>
@@ -190,6 +188,12 @@ function theme_settings_page() {
                             <table class="theme-option-table table-block" >
                                 <tr>
                                     <td>
+                                        <h3>Заголовок блока:</h3>
+                                        <input type="text" name="theme_settings[block_mp_title]" placeholder="Заголовок блока" value="<?php echo esc_attr(tf_variable_exist($options['block_mp_title'])); ?>" style="width: 300px;" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 200px; ">
                                         <div class="main-container">
                                             <div class="left-block block-active">
                                             </div>
@@ -201,7 +205,7 @@ function theme_settings_page() {
                                             </div>
                                         </div>
                                     </td>
-                                    <td>
+                                    <td colspan="2">
                                         <h3>Название блока:</h3>
                                         <input type="text" name="theme_settings[block_mp_1_title]" placeholder="Подпись блока" value="<?php echo esc_attr(tf_variable_exist($options['block_mp_1_title'])); ?>" style="width: 300px;" >
                                     </td>
@@ -217,7 +221,7 @@ function theme_settings_page() {
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td style="width: 200px; ">
                                         <div class="main-container">
                                             <div class="left-block">
                                             </div>
@@ -229,13 +233,13 @@ function theme_settings_page() {
                                             </div>
                                         </div>
                                     </td>
-                                    <td>
+                                    <td colspan="2">
                                         <h3>Название блока:</h3>
                                         <input type="text" name="theme_settings[block_mp_2_title]" placeholder="Подпись блока" value="<?php echo esc_attr(tf_variable_exist($options['block_mp_2_title'])); ?>" style="width: 300px;" >
                                     </td>
                                     <td>
                                         <h3>Страница блока:</h3>
-                                        <?php echo tf_view_pages('theme_settings[block_mp_2_url]',tf_variable_exist($options['block_mp_2_title'])); ?>
+                                        <?php echo tf_view_pages('theme_settings[block_mp_2_url]',tf_variable_exist($options['block_mp_2_url'])); ?>
                                     </td>
                                     <td>
                                         <h3>Картинка фона:</h3>
@@ -245,7 +249,7 @@ function theme_settings_page() {
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td style="width: 200px; ">
                                         <div class="main-container">
                                             <div class="left-block">
                                             </div>
@@ -257,7 +261,7 @@ function theme_settings_page() {
                                             </div>
                                         </div>
                                     </td>
-                                    <td>
+                                    <td colspan="2">
                                         <h3>Название блока:</h3>
                                         <input type="text" name="theme_settings[block_mp_3_title]" placeholder="Подпись блока" value="<?php echo esc_attr(tf_variable_exist($options['block_mp_3_title'])); ?>" style="width: 300px;" >
                                     </td>
@@ -273,7 +277,7 @@ function theme_settings_page() {
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td style="width: 200px; ">
                                         <div class="main-container">
                                             <div class="left-block">
                                             </div>
@@ -285,7 +289,7 @@ function theme_settings_page() {
                                             </div>
                                         </div>
                                     </td>
-                                    <td>
+                                    <td colspan="2">
                                         <h3>Название блока:</h3>
                                         <input type="text" name="theme_settings[block_mp_4_title]" placeholder="Подпись блока" value="<?php echo esc_attr(tf_variable_exist($options['block_mp_4_title'])); ?>" style="width: 300px;" >
                                     </td>
@@ -301,7 +305,7 @@ function theme_settings_page() {
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td style="width: 200px; ">
                                         <div class="main-container">
                                             <div class="left-block">
                                             </div>
@@ -313,7 +317,7 @@ function theme_settings_page() {
                                             </div>
                                         </div>
                                     </td>
-                                    <td>
+                                    <td colspan="2">
                                         <h3>Название блока:</h3>
                                         <input type="text" name="theme_settings[block_mp_5_title]" placeholder="Подпись блока" value="<?php echo esc_attr(tf_variable_exist($options['block_mp_5_title'])); ?>" style="width: 300px;" >
                                     </td>

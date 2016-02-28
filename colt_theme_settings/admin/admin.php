@@ -23,3 +23,4 @@ add_action( 'admin_enqueue_scripts', 'colt_theme_admin_js' );
 //Подключение php файлов
 require colt_theme_settings_directory . '/admin/include/template.php';
 require colt_theme_settings_directory . '/admin/include/function.php';
+require colt_theme_settings_directory . '/admin/include/services.php';
