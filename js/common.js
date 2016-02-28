@@ -27,4 +27,5 @@
         item: 3,
         controls: false
     });
+    $(".carousel-inner").find('.item').filter(':first').addClass('active');
 })();

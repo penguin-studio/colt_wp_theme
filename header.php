@@ -129,17 +129,19 @@
 		<section class="slider">
 			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 				<!-- Wrapper for slides -->
-				<div class="carousel-inner" role="listbox">
-					<div class="item active">
-						<img src="<?php echo esc_url($theme_path_uri); ?>/img/slider/1.jpg" alt="...">
-					</div>
-					<div class="item">
-						<img src="<?php echo esc_url($theme_path_uri); ?>/img/slider/1.jpg" alt="...">
-					</div>
-					<div class="item">
-						<img src="<?php echo esc_url($theme_path_uri); ?>/img/slider/1.jpg" alt="...">
-					</div>
-				</div>
+
+				<?php
+					if(function_exists('slider_view')){
+						$args =array(
+							'before_img' => '<div class="item">',
+							'after_img' => '</div>',
+							'container_start' => '<div class="carousel-inner" role="listbox">',
+							'conteiner_end' => '</div>',
+							'slider_slug' => 'slajder-glavnoj-stranicy'
+						);
+						echo slider_view($args);
+					}
+				?>
 				<!-- Controls -->
 				<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
 					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>

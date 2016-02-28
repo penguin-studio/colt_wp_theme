@@ -11,3 +11,5 @@ define('colt_theme_settings_directory_uri',get_template_directory_uri() . '/colt
 
 //Подключаем файл настроек страницы Настроек темы в админке
 require colt_theme_settings_directory . '/admin/admin.php';
+//Подключение слайдера
+require colt_theme_settings_directory . '/penguin_slider/penguin_slider.php';
