@@ -13,3 +13,5 @@ define('colt_theme_settings_directory_uri',get_template_directory_uri() . '/colt
 require colt_theme_settings_directory . '/admin/admin.php';
 //Подключение слайдера
 require colt_theme_settings_directory . '/penguin_slider/penguin_slider.php';
+//Подключение типа барберов и татуировщиков
+require colt_theme_settings_directory . '/masters/masters.php';

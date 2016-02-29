@@ -1,0 +1,20 @@
+.galery-table{
+    width: 100%;
+}
+.galery-table .master-galery-area-style{
+    margin-top: 10px;
+    padding: 10px 10px 10px 10px;
+    border:3px dashed #cccccc;
+    width:100%;
+}
+img.galery-img-class {
+    width:115px;
+    height: 115px;
+}
+
+.galery-img{
+    padding: 7px;
+    margin: 1px;
+    border: 2px dashed #00a0d2;
+    float: left;
+}
