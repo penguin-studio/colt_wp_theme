@@ -27,7 +27,7 @@ add_action( 'admin_menu', 'add_settings_page' );
  * !!Требует реставрации
  * Дата: 25.02.2016
  */
-function tf_img_upload($name, $value = '', $w = 115, $h = 'auto') {
+function tf_img_upload($name, $value = '', $w = '115px', $h = 'auto') {
     $default = colt_theme_settings_directory_uri . '/admin/images/no-logo.png';
     if( $value ) {
         $image_attributes = wp_get_attachment_image_src( $value, 'full' );
@@ -39,7 +39,7 @@ function tf_img_upload($name, $value = '', $w = 115, $h = 'auto') {
 
     return '
 	<div>
-		<img data-src="'.$default.'" src="'.$src.'" width="'.$w.'px" height="'.$h.'px" />
+		<img data-src="'.$default.'" src="'.$src.'" width="'.$w.'" height="'.$h.'" />
 		<div>
 			<input type="hidden" name="'.$name.'" id="'.$name.'" value="'.$value.'" />
 			<button type="button" class="upload_image_button button">Загрузить</button>

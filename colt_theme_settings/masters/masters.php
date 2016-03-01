@@ -15,6 +15,11 @@ function master_admin_js() {
 }
 add_action( 'admin_enqueue_scripts', 'master_admin_js' );
 
+//Размер превью для мастеров
+add_image_size( 'master-preview', 280, 425, true );
+//Размер картинки для страницы мастера
+add_image_size( 'master-full-screen', 1150, 440, true );
+
 //Подключение типа барберов и татуировщиков
 require colt_theme_settings_directory . '/masters/include/masters_post_type.php';
 
