@@ -91,7 +91,7 @@ function theme_settings_page() {
 
                                     <select name="theme_settings[menu_right_side]">
                                     <option value="-1" >Не выбрано</option>
-                                    <?php if($menus):?>
+                                    <?php if(isset($menus)):?>
                                         <?php foreach($menus as $item): ?>
                                             <option value="<?php echo esc_attr($item->term_id);?>" <?php selected($item->term_id,$options['menu_right_side'] ); ?>>
                                                 <?php echo esc_html($item->name);?>
@@ -330,6 +330,48 @@ function theme_settings_page() {
                                         <?php
                                         echo tf_img_upload('theme_settings[block_mp_5_image]', tf_variable_exist($options['block_mp_5_image']));
                                         ?>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="theme-option-table">
+                                <tr valign="top"><td colspan='2'><h1>Настройка страницы ЗМІ про нас</h1></td></tr>
+                            </table>
+                            <table class="theme-option-table table-block" >
+                                <tr>
+                                    <td>
+                                        <h3>Выбор категории для отображения на странице ЗМІ про нас</h3>
+                                        <select name="theme_settings[mass_media_about_us]" style="width:300px">
+                                        <?php
+                                        $args = array(
+                                            'type'         => 'post',
+                                            'child_of'     => 0,
+                                            'parent'       => '',
+                                            'orderby'      => 'name',
+                                            'order'        => 'ASC',
+                                            'hide_empty'   => 1,
+                                            'hierarchical' => 1,
+                                            'exclude'      => '',
+                                            'include'      => '',
+                                            'number'       => 0,
+                                            'taxonomy'     => 'category',
+                                            'pad_counts'   => false
+                                        );
+
+                                        $mass_media_about_us = isset($options['mass_media_about_us'])?$options['mass_media_about_us']:0;
+
+                                        ?>
+                                            <option value="0" <?php selected( $mass_media_about_us, '0' ) ?>>Не выбрано</option>
+                                        <?php
+                                            $categories = get_categories( $args );
+                                            if( $categories ){
+                                                foreach( $categories as $cat ){
+                                                    ?>
+                                                    <option value="<?php echo esc_attr($cat->slug); ?>" <?php selected( $mass_media_about_us, $cat->slug ) ?>><?php echo esc_html($cat->name) ?></option>
+                                                <?php
+                                               }
+                                            }
+                                        ?>
+                                        </select>
                                     </td>
                                 </tr>
                             </table>

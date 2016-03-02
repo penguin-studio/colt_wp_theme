@@ -1,11 +1,11 @@
 <?php
 /*
-Template Name: Шаблон страницы барбер мастеров
+Template Name: Шаблон страницы ЗМІ про нас
 */
 /**
- * User: Эзиз
- * Date: 01.03.2016
- * Файл отвечает за вывод страницы барбер мастеров
+ * User: Максим Руденко
+ * Date: 02.03.2016
+ *
  */
 ?>
 <?php get_header();?>
@@ -13,9 +13,9 @@ Template Name: Шаблон страницы барбер мастеров
     <div class="row">
         <div class="col-lg-12 col-md-12">
             <div class="main-blocks col-md-12">
-                <h2 class="main-blocks__title">Барбер майстри</h2>
+                <h2 class="main-blocks__title">ЗМІ про нас</h2>
                 <div class="row">
-                    <?php get_template_part('content/loop/barber_master_page'); ?>
+                    <?php get_template_part('content/loop/mass_media_page'); ?>
                 </div>
             </div>
         </div>

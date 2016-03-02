@@ -15,3 +15,5 @@ require colt_theme_settings_directory . '/admin/admin.php';
 require colt_theme_settings_directory . '/penguin_slider/penguin_slider.php';
 //Подключение типа барберов и татуировщиков
 require colt_theme_settings_directory . '/masters/masters.php';
+//Настройки для страницы ЗМІ про нас
+require colt_theme_settings_directory . '/mass_media/mass_media.php';

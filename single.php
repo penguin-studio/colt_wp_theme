@@ -1,13 +1,12 @@
 <?php get_header(); ?>
 <?php if ( have_posts() ) : ?>
-	<?php
-	// Start the loop.
+<?php
 	while ( have_posts() ) : the_post();
 ?>
-		<?php the_title();?>
-			<?php the_content(); ?>
+		<?php get_template_part('content/single/blog'); ?>
 <?php
 	endwhile;
 endif;
 ?>
+<div class="hidden-sm hidden-xs separator-line"></div>
 <?php get_footer(); ?>

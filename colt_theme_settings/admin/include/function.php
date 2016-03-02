@@ -56,7 +56,10 @@ function tf_img_upload($name, $value = '', $w = '115px', $h = 'auto') {
  * Дата: 26.02.2016
  */
 function tf_variable_exist($variable){
-    return isset($variable)?$variable:'';
+    if(isset($variable)){
+        return $variable;
+    }
+    else{return '';}
 }
 
 /**

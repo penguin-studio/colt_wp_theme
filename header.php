@@ -5,7 +5,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
-	<?php global $post; $options = get_option( 'theme_settings' ); ?>
+	<?php
+			global $post;
+			global $options;
+			$options = tf_variable_exist(get_option( 'theme_settings' ));
+
+	?>
 	<?php if(tf_variable_exist($options['favicon'])):?>
 		<?php $favicon_url = wp_get_attachment_image_url( $options['favicon'], 'full' ); ?>
 	<link rel="icon" type="image/vnd.microsoft.icon" href="<?php echo esc_url($favicon_url);?>">
@@ -41,21 +46,33 @@
 			<div class="header-nav-bar-left">
 				<nav class="nav__social">
 					<ul class="nav__social-list">
-						<?php if(tf_variable_exist($options['social_vk_visible']) && $options['social_vk_visible'] == '1' &&
-							$options['social_vk_url'] != ''):?>
-							<li><a class="fa fa-vk" href="<?php echo esc_url($options['social_vk_url']);?>"></a></li>
+						<?php
+						 $social_vk_visible = isset($options['social_vk_visible'])?$options['social_vk_visible']:'';
+						 $social_vk_url = isset($options['social_vk_url'])?$options['social_vk_url']:'';
+						$social_facebook_visible = isset($options['social_facebook_visible'])?$options['social_facebook_visible']:'';
+						$social_facebook_url = isset($options['social_facebook_url'])?$options['social_facebook_url']:'';
+						$social_instagram_visible = isset($options['social_instagram_visible'])?$options['social_instagram_visible']:'';
+						$social_instagram_url = isset($options['social_instagram_url'])?$options['social_instagram_url']:'';
+						$social_twitter_visible = isset($options['social_twitter_visible'])?$options['social_twitter_visible']:'';
+						$social_twitter_url = isset($options['social_twitter_url'])?$options['social_twitter_url']:'';
+
+						?>
+
+						<?php if($social_vk_visible && $social_vk_visible == '1' &&
+							$social_vk_url != ''):?>
+							<li><a class="fa fa-vk" href="<?php echo esc_url($social_vk_url);?>"></a></li>
 						<?php endif; ?>
-						<?php if(tf_variable_exist($options['social_facebook_visible']) && $options['social_facebook_visible'] == '1' &&
-							$options['social_facebook_url'] != ''):?>
-							<li><a class="fa fa-facebook" href="<?php echo esc_url($options['social_facebook_url']);?>"></a></li>
+						<?php if($social_facebook_visible && $social_facebook_visible == '1' &&
+							$social_facebook_url != ''):?>
+							<li><a class="fa fa-facebook" href="<?php echo esc_url($social_facebook_url);?>"></a></li>
 						<?php endif; ?>
-						<?php if(tf_variable_exist($options['social_instagram_visible']) && $options['social_instagram_visible'] == '1' &&
-							$options['social_instagram_url'] != ''):?>
-							<li><a class="fa fa-instagram" href="<?php echo esc_url($options['social_instagram_url']);?>"></a></li>
+						<?php if($social_instagram_visible && $social_instagram_visible == '1' &&
+							$social_instagram_url != ''):?>
+							<li><a class="fa fa-instagram" href="<?php echo esc_url($social_instagram_url);?>"></a></li>
 						<?php endif; ?>
-						<?php if(tf_variable_exist($options['social_twitter_visible']) && $options['social_twitter_visible'] == '1' &&
-							$options['social_twitter_url'] != ''):?>
-							<li><a class="fa fa-twitter" href="<?php echo esc_url($options['social_twitter_url']);?>"></a></li>
+						<?php if( $social_twitter_visible && $social_twitter_visible == '1' &&
+							$social_twitter_url != ''):?>
+							<li><a class="fa fa-twitter" href="<?php echo esc_url($social_twitter_url);?>"></a></li>
 						<?php endif; ?>
 					</ul>
 				</nav>
@@ -86,8 +103,10 @@
 			</div>
 		<?php
 		$logo_url = $theme_path_uri.'/img/default_logo.png';
-		if(tf_variable_exist($options['logo_uri'])){
-			$logo_url = wp_get_attachment_image_url($options['logo_uri'], 300, 300);
+		$logo_uri = isset($options['logo_uri'])?$options['logo_uri']:'';
+
+		if($logo_uri){
+			$logo_url = wp_get_attachment_image_url($logo_uri, 300, 300);
 		}
 		?>
 		<div class="header-logo">

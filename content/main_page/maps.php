@@ -13,20 +13,25 @@
                     $lat  = "50.448071";
                     $lang = "30.522062";
                     $zoom = "12";
-                    if(tf_variable_exist($options['maps_lat']) && $options['maps_lat'] != ''){
-                        $lat = $options['maps_lat'];
+                    $maps_lat = isset($options['maps_lat'])?$options['maps_lat']:'';
+                    $maps_lng = isset($options['maps_lng'])?$options['maps_lng']:'';
+                    $maps_zoom = isset($options['maps_zoom'])?$options['maps_zoom']:'';
+                    $maps_marker = isset($options['maps_marker'])?$options['maps_marker']:'';
+
+                    if($maps_lat && $maps_lat != ''){
+                        $lat = $maps_lat;
                     }
-                    if(tf_variable_exist($options['maps_lng']) && $options['maps_lng'] != ''){
-                        $lang = $options['maps_lng'];
+                    if($maps_lng && $maps_lng != ''){
+                        $lang = $maps_lng;
                     }
-                    if(tf_variable_exist($options['maps_zoom']) && $options['maps_zoom'] != ''){
-                        $zoom = $options['maps_zoom'];
+                    if($maps_zoom && $maps_zoom != ''){
+                        $zoom = $maps_zoom;
                     }
 
                     $theme_path_uri = get_template_directory_uri();
                     $marker_url = $theme_path_uri.'/img/marker.png';
-                    if(tf_variable_exist($options['maps_marker'])){
-                        $marker_url = wp_get_attachment_image_url($options['maps_marker'], 'full');
+                    if($maps_marker){
+                        $marker_url = wp_get_attachment_image_url($maps_marker, 'full');
                     }
 
                     ?>

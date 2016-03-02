@@ -2,7 +2,9 @@
     var mpSliderBtn = $('.go-to-down'),
         lightSlider = $(".lightSlider"),
         noveltySlider = $('#noveltySlider'),
-        viwedSlider = $('#viwedSlider');
+        viwedSlider = $('#viwedSlider'),
+        masterWorksSlider = $('.master-works'),
+        serviceSlider = $('.service-slider__content');
 
     mpSliderBtn.on('click', function(e){
         e.preventDefault();
@@ -25,6 +27,17 @@
 
     viwedSlider.lightSlider({
         item: 3,
+        controls: false
+    });
+
+    masterWorksSlider.lightSlider({
+        item: 5,
+        pager: false,
+        slideMargin: 0
+    });
+
+    serviceSlider.lightSlider({
+        item: 1,
         controls: false
     });
 
