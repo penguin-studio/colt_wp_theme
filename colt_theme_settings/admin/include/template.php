@@ -159,25 +159,36 @@ function theme_settings_page() {
                                 <th>Состояние </th>
                                 <th>Ссылка</th>
                                 </thead>
+                                <?php
+                                $social_vk_visible = isset($options['social_vk_visible'])?$options['social_vk_visible']:'';
+                                $social_vk_url = isset($options['social_vk_url'])?$options['social_vk_url']:'';
+                                $social_facebook_visible = isset($options['social_facebook_visible'])?$options['social_facebook_visible']:'';
+                                $social_facebook_url = isset($options['social_facebook_url'])?$options['social_facebook_url']:'';
+                                $social_instagram_visible = isset($options['social_instagram_visible'])?$options['social_instagram_visible']:'';
+                                $social_instagram_url = isset($options['social_instagram_url'])?$options['social_instagram_url']:'';
+                                $social_twitter_visible = isset($options['social_twitter_visible'])?$options['social_twitter_visible']:'';
+                                $social_twitter_url = isset($options['social_twitter_url'])?$options['social_twitter_url']:'';
+
+                                ?>
                                 <tr>
                                     <td>Вконтакте</td>
-                                    <td><input type="checkbox" name="theme_settings[social_vk_visible]" value="1" <?php checked(tf_variable_exist($options['social_vk_visible']),'1'); ?>></td>
-                                    <td><input type="text" name="theme_settings[social_vk_url]" value="<?php echo esc_attr(tf_variable_exist($options['social_vk_url'])); ?>" style="width: 400px;" ></td>
+                                    <td><input type="checkbox" name="theme_settings[social_vk_visible]" value="1" <?php checked($social_vk_visible,'1'); ?>></td>
+                                    <td><input type="text" name="theme_settings[social_vk_url]" value="<?php echo esc_attr($social_vk_url); ?>" style="width: 400px;" ></td>
                                 </tr>
                                 <tr>
                                     <td>Facebook</td>
-                                    <td><input type="checkbox" name="theme_settings[social_facebook_visible]" value="1" <?php checked(tf_variable_exist($options['social_facebook_visible']),'1'); ?>></td>
-                                    <td><input type="text" name="theme_settings[social_facebook_url]" value="<?php echo esc_attr(tf_variable_exist($options['social_facebook_url'])); ?>" style="width: 400px;" ></td>
+                                    <td><input type="checkbox" name="theme_settings[social_facebook_visible]" value="1" <?php checked($social_facebook_visible,'1'); ?>></td>
+                                    <td><input type="text" name="theme_settings[social_facebook_url]" value="<?php echo esc_attr($social_facebook_url); ?>" style="width: 400px;" ></td>
                                 </tr>
                                 <tr>
                                     <td>Instagram</td>
-                                    <td><input type="checkbox" name="theme_settings[social_instagram_visible]" value="1" <?php checked(tf_variable_exist($options['social_instagram_visible']),'1'); ?>></td>
-                                    <td><input type="text" name="theme_settings[social_instagram_url]" value="<?php echo esc_attr(tf_variable_exist($options['social_instagram_url'])); ?>" style="width: 400px;" ></td>
+                                    <td><input type="checkbox" name="theme_settings[social_instagram_visible]" value="1" <?php checked($social_instagram_visible,'1'); ?>></td>
+                                    <td><input type="text" name="theme_settings[social_instagram_url]" value="<?php echo esc_attr($social_instagram_url); ?>" style="width: 400px;" ></td>
                                 </tr>
                                 <tr>
                                     <td>Twitter</td>
-                                    <td><input type="checkbox" name="theme_settings[social_twitter_visible]" value="1" <?php checked(tf_variable_exist($options['social_twitter_visible']),'1'); ?>></td>
-                                    <td><input type="text" name="theme_settings[social_twitter_url]" value="<?php echo esc_attr(tf_variable_exist($options['social_twitter_url'])); ?>" style="width: 400px;" ></td>
+                                    <td><input type="checkbox" name="theme_settings[social_twitter_visible]" value="1" <?php checked($social_twitter_visible,'1'); ?>></td>
+                                    <td><input type="text" name="theme_settings[social_twitter_url]" value="<?php echo esc_attr($social_twitter_url); ?>" style="width: 400px;" ></td>
                                 </tr>
                             </table>
                         </section>
@@ -211,7 +222,7 @@ function theme_settings_page() {
                                     </td>
                                     <td>
                                         <h3>Страница блока:</h3>
-                                        <?php echo tf_view_pages('theme_settings[block_mp_1_url]',tf_variable_exist($options['block_mp_1_title'])); ?>
+                                        <?php echo tf_view_pages('theme_settings[block_mp_1_url]',tf_variable_exist($options['block_mp_1_url'])); ?>
                                     </td>
                                     <td>
                                         <h3>Картинка фона:</h3>
@@ -267,7 +278,7 @@ function theme_settings_page() {
                                     </td>
                                     <td>
                                         <h3>Страница блока:</h3>
-                                        <?php echo tf_view_pages('theme_settings[block_mp_3_url]',tf_variable_exist($options['block_mp_3_title'])); ?>
+                                        <?php echo tf_view_pages('theme_settings[block_mp_3_url]',tf_variable_exist($options['block_mp_3_url'])); ?>
                                     </td>
                                     <td>
                                         <h3>Картинка фона:</h3>
@@ -295,7 +306,7 @@ function theme_settings_page() {
                                     </td>
                                     <td>
                                         <h3>Страница блока:</h3>
-                                        <?php echo tf_view_pages('theme_settings[block_mp_4_url]',tf_variable_exist($options['block_mp_4_title'])); ?>
+                                        <?php echo tf_view_pages('theme_settings[block_mp_4_url]',tf_variable_exist($options['block_mp_4_url'])); ?>
                                     </td>
                                     <td>
                                         <h3>Картинка фона:</h3>
@@ -323,7 +334,7 @@ function theme_settings_page() {
                                     </td>
                                     <td>
                                         <h3>Страница блока:</h3>
-                                        <?php echo tf_view_pages('theme_settings[block_mp_5_url]',tf_variable_exist($options['block_mp_5_title'])); ?>
+                                        <?php echo tf_view_pages('theme_settings[block_mp_5_url]',tf_variable_exist($options['block_mp_5_url'])); ?>
                                     </td>
                                     <td>
                                         <h3>Картинка фона:</h3>
