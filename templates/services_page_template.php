@@ -150,7 +150,7 @@ Template Name: Шаблон страницы Услуги
                         <div class="link-box laying" <?php echo $style; ?>>
                             <h3 class="link-box__title"><?php echo $block_services_7_title; ?></h3>
                             <div class="overlay">
-                                <a href="<?php echo $block_services_7_url; ?>"><img class="overlay-img" src="img/main-links/logo-link.png"></a>
+                                <a href="<?php echo $block_services_7_url; ?>"><img class="overlay-img" src="<?php echo $overlay_img; ?>"></a>
                             </div>
                         </div>
                     </div>
@@ -169,7 +169,7 @@ Template Name: Шаблон страницы Услуги
                         <div class="link-box make-tattoo" <?php echo $style; ?>>
                             <h3 class="link-box__title motivation__title"><?php echo $block_services_8_title; ?></h3>
                             <div class="overlay">
-                                <a href="<?php echo $block_services_8_url; ?>"><img class="overlay-img" src="img/main-links/logo-link.png"></a>
+                                <a href="<?php echo $block_services_8_url; ?>"><img class="overlay-img" src="<?php echo $overlay_img; ?>"></a>
                             </div>
                         </div>
                     </div>
@@ -188,7 +188,7 @@ Template Name: Шаблон страницы Услуги
                         <div class="link-box mowing-machine" <?php echo $style; ?>>
                             <h3 class="link-box__title motivation__title"><?php echo $block_services_9_title; ?></h3>
                             <div class="overlay">
-                                <a href="<?php echo $block_services_9_url; ?>"><img class="overlay-img" src="img/main-links/logo-link.png"></a>
+                                <a href="<?php echo $block_services_9_url; ?>"><img class="overlay-img" src="<?php echo $overlay_img; ?>"></a>
                             </div>
                         </div>
                     </div>
@@ -207,7 +207,7 @@ Template Name: Шаблон страницы Услуги
                         <div class="link-box beard-grooming" <?php echo $style; ?>>
                             <h3 class="link-box__title motivation__title"><?php echo $block_services_10_title; ?></h3>
                             <div class="overlay">
-                                <a href="<?php echo $block_services_10_url; ?>"><img class="overlay-img" src="img/main-links/logo-link.png"></a>
+                                <a href="<?php echo $block_services_10_url; ?>"><img class="overlay-img" src="<?php echo $overlay_img; ?>"></a>
                             </div>
                         </div>
                     </div>
