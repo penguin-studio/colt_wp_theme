@@ -803,6 +803,26 @@ function theme_settings_page() {
                                     </td>
                                 </tr>
                             </table>
+                            <!-- Настройка блока услуг -->
+                            <table class="theme-option-table">
+                                <tr valign="top"><td colspan='2'><h1>Настройка страницы школа барберів і тату</h1></td></tr>
+                            </table>
+                            <table class="theme-option-table table-block" >
+                                <tr valign="top">
+                                    <?php
+                                        $school_top_block_id = isset($options['school_top_block_id'])?$options['school_top_block_id']:'';
+                                        $school_bottom_block_id = isset($options['school_bottom_block_id'])?$options['school_bottom_block_id']:'';
+                                    ?>
+                                    <td>
+                                        <h3>Страница верхнего блока:</h3>
+                                        <?php echo tf_view_pages_with_id('theme_settings[school_top_block_id]',$school_top_block_id); ?>
+                                    </td>
+                                    <td>
+                                        <h3>Страница нижнего блока:</h3>
+                                        <?php echo tf_view_pages_with_id('theme_settings[school_bottom_block_id]',$school_bottom_block_id); ?>
+                                    </td>
+                                </tr>
+                            </table>
 
                         </section>
                         <section id="content4">

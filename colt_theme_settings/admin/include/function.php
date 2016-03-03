@@ -110,3 +110,43 @@ function tf_view_pages($name, $value, $parent_name = ''){
     </select>
   ';
 }
+function tf_view_pages_with_id($name, $value, $parent_name = ''){
+
+    $args = "";
+    $page_id = -1;
+    $pages = get_pages();
+    if($parent_name != ''){
+        foreach ( $pages as $page ) {
+            if(strcmp($page->post_name, $parent_name) == 0){
+                $page_id = $page->ID;
+                $args = array(
+                    'child_of' => $page_id,
+                    'hierarchical' => 0
+                );
+                break;
+            }
+        }
+    }
+    $select = '';
+    if(strcmp($value,  '') == 0){
+        $select = 'select = "selected"';
+    }
+    $option = '<option value="" '.$select.'>Не выбрано</option>';
+
+    $pages = get_pages($args);
+    foreach ( $pages as $page ) {
+        $select = '';
+        if(strcmp($value,  $page->ID) == 0){
+            $select = 'selected = "selected"';
+        }
+        $option .= '<option '.$select.' value="' .$page->ID. '">';
+        $option .= $page->post_title.' / '.$page->post_name;
+        $option .= '</option>';
+    }
+
+    return '
+    <select name="'.$name.'">
+      '.$option.'
+    </select>
+  ';
+}

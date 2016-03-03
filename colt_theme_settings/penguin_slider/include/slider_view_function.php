@@ -81,35 +81,7 @@ function slider_view($args)
 
     return $slider_content;
 }
-/**
- * @param $atts
- *      before_img - до вывода img
- *      after_img - после вывода img
- *      container_start - Внешний контейнеh до вывода списка
- *      conteiner_end - Внешний контейнеh после вывода фото
- *      slider_slug - ярлык слайдера - какой слайдер выводить
- *
- * @return string
- */
-function slider_view_shortcode($atts){
-    extract( shortcode_atts( array(
-        'before_img' => '<li>',
-        'after_img' => '</li>',
-        'container_start' => '<div id="slider" class="slider">',
-        'conteiner_end' => '</div>',
-        'slider_slug' => ''
-    ), $atts ) );
-    $args =array(
-        'before_img' => slider_variable_exist($before_img),
-        'after_img' => slider_variable_exist($after_img),
-        'container_start' => slider_variable_exist($container_start),
-        'conteiner_end' => slider_variable_exist($conteiner_end),
-        'slider_slug' => slider_variable_exist($slider_slug)
-    );
-    echo slider_view($args);
-}
 
-add_shortcode( 'penguin_slider', 'slider_view_shortcode' );
 
 function slider_variable_exist($variable){
     return isset($variable)?$variable:'';

@@ -22,4 +22,6 @@ $(document).ready(function(){
         marker.setMap(map);
     }
     initMap();
+    //Инициализация слайдера главной страницы
+    $(".carousel-inner").find('.item').filter(':first').addClass('active');
 });

@@ -17,7 +17,25 @@
 
     lightSlider.lightSlider({
         item: 4,
-        pager: false
+        pager: false,
+        slideMargin: 0,
+        responsive :[
+            {
+                breakpoint:800,
+                settings: {
+                    item:2,
+                    slideMove:1,
+                    slideMargin:6
+                }
+            },
+            {
+                breakpoint:480,
+                settings: {
+                    item:1,
+                    slideMove:1
+                }
+            }
+        ]
     });
 
     noveltySlider.lightSlider({
@@ -39,8 +57,5 @@
     serviceSlider.lightSlider({
         item: 1,
         controls: false
-    });
-
-    //Инициализация слайдера главной страницы
-    $(".carousel-inner").find('.item').filter(':first').addClass('active');
+    })
 })();

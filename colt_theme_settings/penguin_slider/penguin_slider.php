@@ -18,3 +18,4 @@ require colt_theme_settings_directory . '/penguin_slider/include/slider_post_typ
 require colt_theme_settings_directory . '/penguin_slider/include/slider_additional_fields.php';
 
 require colt_theme_settings_directory . '/penguin_slider/include/slider_view_function.php';
+require colt_theme_settings_directory . '/penguin_slider/include/shortcode.php';
