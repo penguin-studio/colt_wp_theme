@@ -199,3 +199,62 @@ table.add-box tr.upload-foto-box h4{
 .block-active{
     background-color: #be3631 !important;
 }
+
+.services-conteiner{
+    width:100px;
+    height: 110px;
+}
+.services-right{
+    width: 48px;
+    height: 57px;
+    margin-left: 2px;
+    float: left;
+}
+.services-full-block{
+    width: 100%;
+    height: 36px;
+    float: left;
+    background-color: #2f2f2f;
+}
+.services-mini-block{
+    width: 47%;
+    height: 18px;
+    margin-right: 6%;
+    float: left;
+    background-color: #2f2f2f;
+}
+.non-margin-right{
+    margin-right: 0;
+}
+.services-margin-bottom{
+    margin-bottom: 3px;
+}
+.services-full{
+    width:100%;
+    height: 39px;
+    padding-top: 3px;
+    clear: both;
+}
+.services-mini-2{
+    width:23px;
+    height:36px;
+    margin-left: 2px;
+    margin-right: 2px;
+    float: left;
+    background-color: #2f2f2f;
+}
+.services-full-block-2{
+    width: 47px;
+    height: 36px;
+    margin-right: 2px;
+    float: left;
+    background-color: #2f2f2f;
+}
+.services-mini-2-2{
+    width:24px;
+    height:17px;
+    margin-bottom: 2px;
+    float: left;
+    display: inline;
+    background-color: #2f2f2f;
+}

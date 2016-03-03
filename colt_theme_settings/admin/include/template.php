@@ -198,7 +198,7 @@ function theme_settings_page() {
                             </table>
                             <table class="theme-option-table table-block" >
                                 <tr>
-                                    <td>
+                                    <td colspan="2">
                                         <h3>Заголовок блока:</h3>
                                         <input type="text" name="theme_settings[block_mp_title]" placeholder="Заголовок блока" value="<?php echo esc_attr(tf_variable_exist($options['block_mp_title'])); ?>" style="width: 300px;" >
                                     </td>
@@ -386,6 +386,424 @@ function theme_settings_page() {
                                     </td>
                                 </tr>
                             </table>
+                            <!-- Настройка блока услуг -->
+                            <table class="theme-option-table">
+                                <tr valign="top"><td colspan='2'><h1>Настройка страницы услуги</h1></td></tr>
+                            </table>
+                            <table class="theme-option-table table-block" >
+                                <tr>
+                                    <td>
+                                        <div class="services-conteiner">
+                                            <div class="services-right">
+                                                <div class="services-full-block services-margin-bottom block-active"></div>
+                                                <div class="services-mini-block"></div>
+                                                <div class="services-mini-block non-margin-right"></div>
+                                            </div>
+                                            <div class="services-right">
+                                                <div class="services-mini-block services-margin-bottom"></div>
+                                                <div class="services-mini-block non-margin-right"></div>
+                                                <div class="services-full-block"></div>
+                                            </div>
+                                            <div class="services-full">
+                                                <div class="services-mini-2"></div>
+                                                <div class="services-full-block-2"></div>
+                                                <div class="services-mini-2-2"></div>
+                                                <div class="services-mini-2-2"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <?php
+                                        $block_services_1_title = isset($options['block_services_1_title'])?$options['block_services_1_title']:'';
+                                        $block_services_1_url   = isset($options['block_services_1_url'])?$options['block_services_1_url']:'';
+                                        $block_services_1_img   = isset($options['block_services_1_img'])?$options['block_services_1_img']:'';
+                                    ?>
+                                    <td colspan="2">
+                                        <h3>Название блока:</h3>
+                                        <input type="text" name="theme_settings[block_services_1_title]" placeholder="Подпись блока" value="<?php echo esc_attr($block_services_1_title); ?>" style="width: 300px;" >
+                                    </td>
+                                    <td>
+                                        <h3>Страница блока:</h3>
+                                        <?php echo tf_view_pages('theme_settings[block_services_1_url]',$block_services_1_url); ?>
+                                    </td>
+                                    <td>
+                                        <h3>Картинка фона:</h3>
+                                        <?php
+                                        echo tf_img_upload('theme_settings[block_services_1_img]', $block_services_1_img);
+                                        ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="services-conteiner">
+                                            <div class="services-right">
+                                                <div class="services-full-block services-margin-bottom"></div>
+                                                <div class="services-mini-block"></div>
+                                                <div class="services-mini-block non-margin-right"></div>
+                                            </div>
+                                            <div class="services-right">
+                                                <div class="services-mini-block services-margin-bottom block-active"></div>
+                                                <div class="services-mini-block non-margin-right"></div>
+                                                <div class="services-full-block"></div>
+                                            </div>
+                                            <div class="services-full">
+                                                <div class="services-mini-2"></div>
+                                                <div class="services-full-block-2"></div>
+                                                <div class="services-mini-2-2"></div>
+                                                <div class="services-mini-2-2"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <?php
+                                    $block_services_2_title = isset($options['block_services_2_title'])?$options['block_services_2_title']:'';
+                                    $block_services_2_url   = isset($options['block_services_2_url'])?$options['block_services_2_url']:'';
+                                    $block_services_2_img   = isset($options['block_services_2_img'])?$options['block_services_2_img']:'';
+                                    ?>
+                                    <td colspan="2">
+                                        <h3>Название блока:</h3>
+                                        <input type="text" name="theme_settings[block_services_2_title]" placeholder="Подпись блока" value="<?php echo esc_attr($block_services_2_title); ?>" style="width: 300px;" >
+                                    </td>
+                                    <td>
+                                        <h3>Страница блока:</h3>
+                                        <?php echo tf_view_pages('theme_settings[block_services_2_url]',$block_services_2_url); ?>
+                                    </td>
+                                    <td>
+                                        <h3>Картинка фона:</h3>
+                                        <?php
+                                        echo tf_img_upload('theme_settings[block_services_2_img]', $block_services_2_img);
+                                        ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="services-conteiner">
+                                            <div class="services-right">
+                                                <div class="services-full-block services-margin-bottom"></div>
+                                                <div class="services-mini-block"></div>
+                                                <div class="services-mini-block non-margin-right"></div>
+                                            </div>
+                                            <div class="services-right">
+                                                <div class="services-mini-block services-margin-bottom"></div>
+                                                <div class="services-mini-block non-margin-right block-active"></div>
+                                                <div class="services-full-block"></div>
+                                            </div>
+                                            <div class="services-full">
+                                                <div class="services-mini-2"></div>
+                                                <div class="services-full-block-2"></div>
+                                                <div class="services-mini-2-2"></div>
+                                                <div class="services-mini-2-2"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <?php
+                                    $block_services_3_title = isset($options['block_services_3_title'])?$options['block_services_3_title']:'';
+                                    $block_services_3_url   = isset($options['block_services_3_url'])?$options['block_services_3_url']:'';
+                                    $block_services_3_img   = isset($options['block_services_3_img'])?$options['block_services_3_img']:'';
+                                    ?>
+                                    <td colspan="2">
+                                        <h3>Название блока:</h3>
+                                        <input type="text" name="theme_settings[block_services_3_title]" placeholder="Подпись блока" value="<?php echo esc_attr($block_services_3_title); ?>" style="width: 300px;" >
+                                    </td>
+                                    <td>
+                                        <h3>Страница блока:</h3>
+                                        <?php echo tf_view_pages('theme_settings[block_services_3_url]',$block_services_3_url); ?>
+                                    </td>
+                                    <td>
+                                        <h3>Картинка фона:</h3>
+                                        <?php
+                                        echo tf_img_upload('theme_settings[block_services_3_img]', $block_services_3_img);
+                                        ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="services-conteiner">
+                                            <div class="services-right">
+                                                <div class="services-full-block services-margin-bottom"></div>
+                                                <div class="services-mini-block"></div>
+                                                <div class="services-mini-block non-margin-right"></div>
+                                            </div>
+                                            <div class="services-right">
+                                                <div class="services-mini-block services-margin-bottom"></div>
+                                                <div class="services-mini-block non-margin-right"></div>
+                                                <div class="services-full-block block-active"></div>
+                                            </div>
+                                            <div class="services-full">
+                                                <div class="services-mini-2"></div>
+                                                <div class="services-full-block-2"></div>
+                                                <div class="services-mini-2-2"></div>
+                                                <div class="services-mini-2-2"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <?php
+                                    $block_services_4_title = isset($options['block_services_4_title'])?$options['block_services_4_title']:'';
+                                    $block_services_4_url   = isset($options['block_services_4_url'])?$options['block_services_4_url']:'';
+                                    $block_services_4_img   = isset($options['block_services_4_img'])?$options['block_services_4_img']:'';
+                                    ?>
+                                    <td colspan="2">
+                                        <h3>Название блока:</h3>
+                                        <input type="text" name="theme_settings[block_services_4_title]" placeholder="Подпись блока" value="<?php echo esc_attr($block_services_4_title); ?>" style="width: 300px;" >
+                                    </td>
+                                    <td>
+                                        <h3>Страница блока:</h3>
+                                        <?php echo tf_view_pages('theme_settings[block_services_4_url]',$block_services_4_url); ?>
+                                    </td>
+                                    <td>
+                                        <h3>Картинка фона:</h3>
+                                        <?php
+                                        echo tf_img_upload('theme_settings[block_services_4_img]', $block_services_4_img);
+                                        ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="services-conteiner">
+                                            <div class="services-right">
+                                                <div class="services-full-block services-margin-bottom"></div>
+                                                <div class="services-mini-block block-active"></div>
+                                                <div class="services-mini-block non-margin-right"></div>
+                                            </div>
+                                            <div class="services-right">
+                                                <div class="services-mini-block services-margin-bottom"></div>
+                                                <div class="services-mini-block non-margin-right"></div>
+                                                <div class="services-full-block"></div>
+                                            </div>
+                                            <div class="services-full">
+                                                <div class="services-mini-2"></div>
+                                                <div class="services-full-block-2"></div>
+                                                <div class="services-mini-2-2"></div>
+                                                <div class="services-mini-2-2"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <?php
+                                    $block_services_5_title = isset($options['block_services_5_title'])?$options['block_services_5_title']:'';
+                                    $block_services_5_url   = isset($options['block_services_5_url'])?$options['block_services_5_url']:'';
+                                    $block_services_5_img   = isset($options['block_services_5_img'])?$options['block_services_5_img']:'';
+                                    ?>
+                                    <td colspan="2">
+                                        <h3>Название блока:</h3>
+                                        <input type="text" name="theme_settings[block_services_5_title]" placeholder="Подпись блока" value="<?php echo esc_attr($block_services_5_title); ?>" style="width: 300px;" >
+                                    </td>
+                                    <td>
+                                        <h3>Страница блока:</h3>
+                                        <?php echo tf_view_pages('theme_settings[block_services_5_url]',$block_services_5_url); ?>
+                                    </td>
+                                    <td>
+                                        <h3>Картинка фона:</h3>
+                                        <?php
+                                        echo tf_img_upload('theme_settings[block_services_5_img]', $block_services_5_img);
+                                        ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="services-conteiner">
+                                            <div class="services-right">
+                                                <div class="services-full-block services-margin-bottom"></div>
+                                                <div class="services-mini-block"></div>
+                                                <div class="services-mini-block non-margin-right block-active"></div>
+                                            </div>
+                                            <div class="services-right">
+                                                <div class="services-mini-block services-margin-bottom"></div>
+                                                <div class="services-mini-block non-margin-right"></div>
+                                                <div class="services-full-block"></div>
+                                            </div>
+                                            <div class="services-full">
+                                                <div class="services-mini-2"></div>
+                                                <div class="services-full-block-2"></div>
+                                                <div class="services-mini-2-2"></div>
+                                                <div class="services-mini-2-2"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <?php
+                                    $block_services_6_title = isset($options['block_services_6_title'])?$options['block_services_6_title']:'';
+                                    $block_services_6_url   = isset($options['block_services_6_url'])?$options['block_services_6_url']:'';
+                                    $block_services_6_img   = isset($options['block_services_6_img'])?$options['block_services_6_img']:'';
+                                    ?>
+                                    <td colspan="2">
+                                        <h3>Название блока:</h3>
+                                        <input type="text" name="theme_settings[block_services_6_title]" placeholder="Подпись блока" value="<?php echo esc_attr($block_services_6_title); ?>" style="width: 300px;" >
+                                    </td>
+                                    <td>
+                                        <h3>Страница блока:</h3>
+                                        <?php echo tf_view_pages('theme_settings[block_services_6_url]',$block_services_6_url); ?>
+                                    </td>
+                                    <td>
+                                        <h3>Картинка фона:</h3>
+                                        <?php
+                                        echo tf_img_upload('theme_settings[block_services_6_img]', $block_services_6_img);
+                                        ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="services-conteiner">
+                                            <div class="services-right">
+                                                <div class="services-full-block services-margin-bottom"></div>
+                                                <div class="services-mini-block"></div>
+                                                <div class="services-mini-block non-margin-right"></div>
+                                            </div>
+                                            <div class="services-right">
+                                                <div class="services-mini-block services-margin-bottom"></div>
+                                                <div class="services-mini-block non-margin-right"></div>
+                                                <div class="services-full-block"></div>
+                                            </div>
+                                            <div class="services-full">
+                                                <div class="services-mini-2 block-active"></div>
+                                                <div class="services-full-block-2"></div>
+                                                <div class="services-mini-2-2"></div>
+                                                <div class="services-mini-2-2"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <?php
+                                    $block_services_7_title = isset($options['block_services_7_title'])?$options['block_services_7_title']:'';
+                                    $block_services_7_url   = isset($options['block_services_7_url'])?$options['block_services_7_url']:'';
+                                    $block_services_7_img   = isset($options['block_services_7_img'])?$options['block_services_7_img']:'';
+
+                                    ?>
+                                    <td colspan="2">
+                                        <h3>Название блока:</h3>
+                                        <input type="text" name="theme_settings[block_services_7_title]" placeholder="Подпись блока" value="<?php echo esc_attr($block_services_7_title); ?>" style="width: 300px;" >
+                                    </td>
+                                    <td>
+                                        <h3>Страница блока:</h3>
+                                        <?php echo tf_view_pages('theme_settings[block_services_7_url]',$block_services_7_url); ?>
+                                    </td>
+                                    <td>
+                                        <h3>Картинка фона:</h3>
+                                        <?php
+                                        echo tf_img_upload('theme_settings[block_services_7_img]', $block_services_7_img);
+                                        ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="services-conteiner">
+                                            <div class="services-right">
+                                                <div class="services-full-block services-margin-bottom"></div>
+                                                <div class="services-mini-block"></div>
+                                                <div class="services-mini-block non-margin-right"></div>
+                                            </div>
+                                            <div class="services-right">
+                                                <div class="services-mini-block services-margin-bottom"></div>
+                                                <div class="services-mini-block non-margin-right"></div>
+                                                <div class="services-full-block"></div>
+                                            </div>
+                                            <div class="services-full">
+                                                <div class="services-mini-2"></div>
+                                                <div class="services-full-block-2 block-active"></div>
+                                                <div class="services-mini-2-2"></div>
+                                                <div class="services-mini-2-2"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <?php
+                                    $block_services_8_title = isset($options['block_services_8_title'])?$options['block_services_8_title']:'';
+                                    $block_services_8_url   = isset($options['block_services_8_url'])?$options['block_services_8_url']:'';
+                                    $block_services_8_img   = isset($options['block_services_8_img'])?$options['block_services_8_img']:'';
+                                    ?>
+                                    <td colspan="2">
+                                        <h3>Название блока:</h3>
+                                        <input type="text" name="theme_settings[block_services_8_title]" placeholder="Подпись блока" value="<?php echo esc_attr($block_services_8_title); ?>" style="width: 300px;" >
+                                    </td>
+                                    <td>
+                                        <h3>Страница блока:</h3>
+                                        <?php echo tf_view_pages('theme_settings[block_services_8_url]',$block_services_8_url); ?>
+                                    </td>
+                                    <td>
+                                        <h3>Картинка фона:</h3>
+                                        <?php
+                                        echo tf_img_upload('theme_settings[block_services_8_img]', $block_services_8_img);
+                                        ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="services-conteiner">
+                                            <div class="services-right">
+                                                <div class="services-full-block services-margin-bottom"></div>
+                                                <div class="services-mini-block"></div>
+                                                <div class="services-mini-block non-margin-right"></div>
+                                            </div>
+                                            <div class="services-right">
+                                                <div class="services-mini-block services-margin-bottom"></div>
+                                                <div class="services-mini-block non-margin-right"></div>
+                                                <div class="services-full-block"></div>
+                                            </div>
+                                            <div class="services-full">
+                                                <div class="services-mini-2"></div>
+                                                <div class="services-full-block-2"></div>
+                                                <div class="services-mini-2-2 block-active"></div>
+                                                <div class="services-mini-2-2"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <?php
+                                    $block_services_9_title = isset($options['block_services_9_title'])?$options['block_services_9_title']:'';
+                                    $block_services_9_url   = isset($options['block_services_9_url'])?$options['block_services_9_url']:'';
+                                    $block_services_9_img   = isset($options['block_services_9_img'])?$options['block_services_9_img']:'';
+                                    ?>
+                                    <td colspan="2">
+                                        <h3>Название блока:</h3>
+                                        <input type="text" name="theme_settings[block_services_9_title]" placeholder="Подпись блока" value="<?php echo esc_attr($block_services_9_title); ?>" style="width: 300px;" >
+                                    </td>
+                                    <td>
+                                        <h3>Страница блока:</h3>
+                                        <?php echo tf_view_pages('theme_settings[block_services_9_url]',$block_services_9_url); ?>
+                                    </td>
+                                    <td>
+                                        <h3>Картинка фона:</h3>
+                                        <?php
+                                        echo tf_img_upload('theme_settings[block_services_9_img]', $block_services_9_img);
+                                        ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="services-conteiner">
+                                            <div class="services-right">
+                                                <div class="services-full-block services-margin-bottom"></div>
+                                                <div class="services-mini-block"></div>
+                                                <div class="services-mini-block non-margin-right"></div>
+                                            </div>
+                                            <div class="services-right">
+                                                <div class="services-mini-block services-margin-bottom"></div>
+                                                <div class="services-mini-block non-margin-right"></div>
+                                                <div class="services-full-block"></div>
+                                            </div>
+                                            <div class="services-full">
+                                                <div class="services-mini-2"></div>
+                                                <div class="services-full-block-2"></div>
+                                                <div class="services-mini-2-2"></div>
+                                                <div class="services-mini-2-2 block-active"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <?php
+                                    $block_services_10_title = isset($options['block_services_10_title'])?$options['block_services_10_title']:'';
+                                    $block_services_10_url   = isset($options['block_services_10_url'])?$options['block_services_10_url']:'';
+                                    $block_services_10_img   = isset($options['block_services_10_img'])?$options['block_services_10_img']:'';
+                                    ?>
+                                    <td colspan="2">
+                                        <h3>Название блока:</h3>
+                                        <input type="text" name="theme_settings[block_services_10_title]" placeholder="Подпись блока" value="<?php echo esc_attr($block_services_10_title); ?>" style="width: 300px;" >
+                                    </td>
+                                    <td>
+                                        <h3>Страница блока:</h3>
+                                        <?php echo tf_view_pages('theme_settings[block_services_10_url]',$block_services_10_url); ?>
+                                    </td>
+                                    <td>
+                                        <h3>Картинка фона:</h3>
+                                        <?php
+                                        echo tf_img_upload('theme_settings[block_services_10_img]', $block_services_10_img);
+                                        ?>
+                                    </td>
+                                </tr>
+                            </table>
+
                         </section>
                         <section id="content4">
 
