@@ -30,7 +30,7 @@
                         ?>
                     </table>
                     <div class="wrapp-check-online">
-                        <a class="check-online" href="#">Запис онлайн</a>
+                        <a class="check-online ms_booking" data-url="https://yclients.com/booking/34027/2/1" href="#">Запис онлайн</a>
                     </div>
                 </div>
             </div>
