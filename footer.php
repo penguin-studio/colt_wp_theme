@@ -74,7 +74,10 @@
     $theme_path_uri = get_template_directory_uri()
     ?>
     <!-- script -->
+<<<<<<< HEAD
     <script type="text/javascript" src="https://w15352.yclients.com/widgetJS" charset="UTF-8"></script>
+=======
+>>>>>>> fcdc06e0f859017bba29cfad33fa0e71980a0c76
     <script src="<?php echo esc_url($theme_path_uri); ?>/js/jquery.min.js"></script>
     <script src="<?php echo esc_url($theme_path_uri); ?>/js/lightslider.js"></script>
     <script src="<?php echo esc_url($theme_path_uri); ?>/js/common.js"></script>
