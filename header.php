@@ -46,11 +46,11 @@
 	<header class="header">
 		<div class="container">
 			<div class="header-nav-bar-left hidden-xs">
-
+                <div class="search__form">
+                					<?php get_search_form(); ?>
+                					</div>
 				<nav class="nav__social">
-					<div style="display: inline-block;float: left;">
-					<?php get_search_form(); ?>
-					</div>
+
 					<ul class="nav__social-list" style="display: inline-block;">
 
 						<?php
