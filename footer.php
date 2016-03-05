@@ -80,6 +80,13 @@
     <script src="<?php echo esc_url($theme_path_uri); ?>/js/lightslider.js"></script>
     <script src="<?php echo esc_url($theme_path_uri); ?>/js/common.js"></script>
     <script src="<?php echo esc_url($theme_path_uri); ?>/js/bootstrap.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+    var host = 'https://yclients.com';
+    document.write(unescape("%3Cscript src='" + host + "/js/ms.bookingwlink.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript" charset="utf-8">
+    MSWidget.initWidget();
+    </script>
     <?php if(is_front_page()):?>
         <script src="<?php echo esc_url($theme_path_uri); ?>/js/maps.js"></script>
     <?php endif; ?>
