@@ -48,10 +48,10 @@
 			<div class="header-nav-bar-left">
 
 				<nav class="nav__social">
-					<div style="float: left;">
-					<?php //get_search_form(); ?>
+					<div style="display: inline-block;float: left;">
+					<?php get_search_form(); ?>
 					</div>
-					<ul class="nav__social-list">
+					<ul class="nav__social-list" style="display: inline-block;">
 
 						<?php
 						 $social_vk_visible = isset($options['social_vk_visible'])?$options['social_vk_visible']:'';

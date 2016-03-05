@@ -8,15 +8,21 @@
                         <?php
                         while ( have_posts() ) : the_post();
                             ?>
-                <div class="main-blocks col-md-12">
-                            <h2 class="main-blocks__title"><?php the_title();?></h2>
-                            <div class="post-container">
-                                <?php
-                                /* translators: %s: Name of current post */
-                                the_content();
-                                ?>
+                            <div class="main-blocks col-md-12">
+                                <h2 class="main-blocks__title"><?php the_title();?></h2>
+                                <div class="post-container">
+                                    <?php
+                                    $args = array(
+                                            'maxchar'     => 15,
+                                            'text'        => '',
+                                            'save_format' => false,
+                                            'more_text'   => '...',
+                                            'echo'        => true
+                                    );
+                                        kama_excerpt($args);
+                                    ?>
+                                </div>
                             </div>
-                </div>
                             <?php
                         endwhile;
                     endif;
