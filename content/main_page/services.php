@@ -18,7 +18,7 @@
                             foreach($options['service'] as $key=>$service):
                                 $title = isset($service['title'])?$service['title']:'';
                                 $price = isset($service['price'])?$service['price']:'';
-                                $url   = isset($service['url'])?get_permalink($service['url']):'#';
+                                $url   = isset($service['url'])?$service['url']:'#';
                                 ?>
                                 <tr>
                                     <td><a href="<?php echo $url; ?>"><?php echo esc_attr($title); ?></a></td>
