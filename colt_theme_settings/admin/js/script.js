@@ -87,18 +87,20 @@ $(document).ready(function() {
         var find_service_field = $("table#add-service-field-area").find("tr.service:last");
         var service_name = $('#service_name').val();
         var service_price = $('#service_price').val();
-
+        var select_page = $('#page-select').val();
 
         if(service_name != '') {
             var service_block_number = 0;
             if(find_service_field.length != 0){
                 service_block_number = parseInt(find_service_field.attr("id").slice(1)) + 1;
             }
+            select_page = select_page.replace('%key%',service_block_number);
             $("table#add-service-field-area").append(
                 '<tr id="s'+service_block_number+'" class="service">' +
                 '<td>'+(service_block_number+1)+'</td>' +
-                '<td><input type="text" name="services[service]['+service_block_number+'][]" value="'+service_name+'" style="width: 300px;" placeholder="Название услуги"></td>' +
-                '<td><input type="text" name="services[service]['+service_block_number+'][]" value="'+service_price+'" style="width: 300px;" placeholder="Цена услуги"></td>' +
+                '<td><input type="text" name="services[service]['+service_block_number+'][title]" value="'+service_name+'" style="width: 300px;" placeholder="Название услуги"></td>' +
+                '<td>'+select_page+'</td>'+
+                '<td><input type="text" name="services[service]['+service_block_number+'][url]" value="'+service_price+'" style="width: 300px;" placeholder="Цена услуги"></td>' +
                 '<td><input type="button" id="delete-service" s-id="'+service_block_number+'" value="Удалить услугу"></td>' +
                 '</tr>'
             );

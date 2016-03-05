@@ -22,7 +22,7 @@ $result = '';
 if ($wp_query->have_posts()){
     while ($wp_query->have_posts()) {
         $wp_query->the_post();
-
+        
         $master_first_name  = tf_variable_exist(get_post_meta($post->ID,'_master_first_name', true));
         $master_second_name = tf_variable_exist(get_post_meta($post->ID,'_master_second_name', true));
         $master_img_preview = tf_variable_exist(get_post_meta($post->ID,'_master_img_preview', true));

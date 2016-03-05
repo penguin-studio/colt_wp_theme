@@ -6,9 +6,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<?php
+			global $wp_query;
 			global $post;
 			global $options;
 			$options = tf_variable_exist(get_option( 'theme_settings' ));
+
 
 	?>
 	<?php if(tf_variable_exist($options['favicon'])):?>
@@ -44,8 +46,13 @@
 	<header class="header">
 		<div class="container">
 			<div class="header-nav-bar-left">
+
 				<nav class="nav__social">
+					<div style="float: left;">
+					<?php //get_search_form(); ?>
+					</div>
 					<ul class="nav__social-list">
+
 						<?php
 						 $social_vk_visible = isset($options['social_vk_visible'])?$options['social_vk_visible']:'';
 						 $social_vk_url = isset($options['social_vk_url'])?$options['social_vk_url']:'';
@@ -81,7 +88,7 @@
 						<?php if($options['menu_left_side']): ?>
 							<?php
 							$menu_items = wp_get_nav_menu_items($options['menu_left_side']);
-							$current_page_url = get_permalink($post->ID);
+							$current_page_url = get_permalink();
 
 							if($menu_items):
 								foreach ($menu_items as $item):
@@ -122,7 +129,7 @@
 						<?php if($options['menu_left_side']): ?>
 							<?php
 							$menu_items = wp_get_nav_menu_items($options['menu_right_side']);
-							$current_page_url = get_permalink($post->ID);
+							$current_page_url = get_permalink();
 
 							if($menu_items):
 								foreach ($menu_items as $item):
@@ -155,7 +162,7 @@
 							'before_img' => '<div class="item">',
 							'after_img' => '</div>',
 							'container_start' => '<div class="carousel-inner" role="listbox">',
-							'conteiner_end' => '</div>',
+							'container_end' => '</div>',
 							'slider_slug' => 'slajder-glavnoj-stranicy'
 						);
 						echo slider_view($args);
@@ -175,3 +182,10 @@
 		</section>
 	<?php endif; ?>
 	<section class="main">
+		<div class="container ">
+			<?php if(!is_front_page()): ?>
+			<div class="breadcrumb" style="background-color: #dfdfe2;">
+				<?php echo breadcrumbs(' » '); ?>
+			</div>
+			<?php endif; ?>
+		</div>

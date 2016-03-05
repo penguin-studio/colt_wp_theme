@@ -57,17 +57,29 @@ function services_page() {
                                 <tr>
                                     <td><h3>№</h3></td>
                                     <td><h3>Услуга</h3></td>
+                                    <td><h3>URL-страницы</h3></td>
                                     <td><h3>Цена</h3></td>
                                     <td><h3>Действие</h3></td>
                                 </tr>
                                 <?php
-                                if(tf_variable_exist($options['service'])):
+                                if(isset($options['service'])):
+                                    ?>
+                                        <input type="hidden" id="page-select" value="<?php echo str_replace('"','\'',tf_view_pages('services[service][%key%][url]','')); ?>">
+                                    <?php
                                 foreach($options['service'] as $key=>$service):
+
+                                    $title = isset($service['title'])?$service['title']:'';
+                                    $price = isset($service['price'])?$service['price']:'';
+                                    $url   = isset($service['url'])?$service['url']:'';
+
                                     ?>
                                     <tr id="s<?php echo $key; ?>" class="service">
                                     <td><?php echo (esc_html(tf_variable_exist($key))+1); ?></td>
-                                    <td><input type="text" name="services[service][<?php echo $key; ?>][]" value="<?php echo esc_attr(tf_variable_exist($service[0])); ?>" style="width: 300px;" placeholder="Название услуги"></td>
-                                        <td></span><input type="text" name="services[service][<?php echo $key; ?>][]" value="<?php echo esc_attr(tf_variable_exist($service[1])); ?>" style="width: 300px;" placeholder="Цена услуги"></td>
+                                    <td><input type="text" name="services[service][<?php echo $key; ?>][title]" value="<?php echo esc_attr($title); ?>" style="width: 300px;" placeholder="Название услуги"></td>
+                                        <td>
+                                            <?php echo tf_view_pages('services[service]['.$key.'][url]',$url); ?>
+                                        </td>
+                                        <td></span><input type="text" name="services[service][<?php echo $key; ?>][price]" value="<?php echo esc_attr($price); ?>" style="width: 300px;" placeholder="Цена услуги"></td>
                                         <td><input type="button" id="delete-service" s-id="<?php echo esc_attr(tf_variable_exist($key)); ?>" value="Удалить услугу"></td>
                                     </tr>
                                     <?php

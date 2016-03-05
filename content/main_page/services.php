@@ -16,10 +16,13 @@
                         <?php
                         if(tf_variable_exist($options['service'])):
                             foreach($options['service'] as $key=>$service):
+                                $title = isset($service['title'])?$service['title']:'';
+                                $price = isset($service['price'])?$service['price']:'';
+                                $url   = isset($service['url'])?get_permalink($service['url']):'#';
                                 ?>
                                 <tr>
-                                    <td><a href="#"><?php echo esc_attr(tf_variable_exist($service[0])); ?></a></td>
-                                    <td><?php echo esc_attr(tf_variable_exist($service[1])); ?></td>
+                                    <td><a href="<?php echo $url; ?>"><?php echo esc_attr($title); ?></a></td>
+                                    <td><?php echo esc_attr($price); ?></td>
                                 </tr>
                                 <?php
                             endforeach;

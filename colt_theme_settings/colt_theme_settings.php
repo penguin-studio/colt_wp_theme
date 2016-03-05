@@ -19,3 +19,5 @@ require colt_theme_settings_directory . '/masters/masters.php';
 require colt_theme_settings_directory . '/mass_media/mass_media.php';
 //Настройки для почты
 require colt_theme_settings_directory . '/mail/mail.php';
+
+require colt_theme_settings_directory . '/include/breadcrumbs.php';

@@ -8,7 +8,7 @@ Template Name: Шаблон страницы тату мастеров
  * Файл отвечает за вывод страницы тату мастеров
  */
 ?>
-<?php get_header();?>
+<?php get_header(); ?>
 <div class="container">
     <div class="row">
         <div class="col-lg-12 col-md-12">

@@ -26,7 +26,7 @@ function slider_view_shortcode($atts){
         'before_img' => $before_img,
         'after_img' => $after_img,
         'container_start' => $container_start,
-        'conteiner_end' => $container_end,
+        'container_end' => $container_end,
         'slider_slug' => $slider_slug
     );
     
