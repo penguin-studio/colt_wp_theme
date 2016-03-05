@@ -24,6 +24,7 @@
                            <?php endif; ?>
                             <?php if(tf_variable_exist($options['contacts_email']) && $options['contacts_email'] != ''):?>
                             <li><a href="mailto:<?php echo esc_attr($options['contacts_email']);?>"><?php echo esc_html($options['contacts_email']);?></a></li>
+                            <li class="skype-call"><i class="fa fa-skype"></i><a href="skype:[barbershopmrcolt]">barbershopmrcolt</a></li>
                             <?php endif; ?>
                         </ul>
                     </div>
@@ -62,7 +63,7 @@
                         </nav>
                         <div class="faq">
                             <a href="#">FAQ</a>
-                            <a class="footer-question" href="#">задать вопрос</a>
+                            <a class="footer-question" href="#">Задать вопрос</a>
                         </div>
                     </div>
                 </div>

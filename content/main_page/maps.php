@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-lg-12 col-md-12">
                 <div class="main-blocks about-us col-md-12">
-                    <h2 class="main-blocks__title">Контакти</h2>
+                    <h2 class="main-blocks__title">Контакти:</h2>
                     <?php
                     $lat  = "50.448071";
                     $lang = "30.522062";
