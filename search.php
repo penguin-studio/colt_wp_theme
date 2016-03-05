@@ -7,13 +7,18 @@
                     <?php if ( have_posts() ) : ?>
                         <?php
                         while ( have_posts() ) : the_post();
+                            global $post;
+
+                            if($post->post_type == 'slider' ){
+                                continue;
+                            }
                             ?>
                             <div class="main-blocks col-md-12">
-                                <h2 class="main-blocks__title"><?php the_title();?></h2>
+                                <div class="title"><?php the_title();?></div>
                                 <div class="post-container">
                                     <?php
                                     $args = array(
-                                            'maxchar'     => 15,
+                                            'maxchar'     => 100,
                                             'text'        => '',
                                             'save_format' => false,
                                             'more_text'   => '...',
