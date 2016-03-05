@@ -5,7 +5,7 @@
  */
 function feedback_form()
 {
-    return'
+    return '
     <div class="col-md-6 col-md-offset-3" style="clear:both;">
     <form class="request request-franchise" action = "" method = "post" >
         <h3 > Залишити заявку </h3 >

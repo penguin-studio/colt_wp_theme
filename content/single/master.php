@@ -11,6 +11,8 @@
             <div class="main-blocks col-md-12">
                 <?php
                 global $post;
+                
+                
 
                 $master_first_name  = tf_variable_exist(get_post_meta($post->ID,'_master_first_name', true));
                 $master_second_name = tf_variable_exist(get_post_meta($post->ID,'_master_second_name', true));

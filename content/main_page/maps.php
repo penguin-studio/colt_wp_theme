@@ -4,12 +4,14 @@
  * Date: 29.02.2016
  */
 ?>
-    <div class="container">
+    <div class="container" id="contacts">
         <div class="row">
             <div class="col-lg-12 col-md-12">
                 <div class="main-blocks about-us col-md-12">
                     <h2 class="main-blocks__title">Контакти</h2>
                     <?php
+                    $options = get_option( 'theme_settings' );
+
                     $lat  = "50.448071";
                     $lang = "30.522062";
                     $zoom = "12";
@@ -18,13 +20,13 @@
                     $maps_zoom = isset($options['maps_zoom'])?$options['maps_zoom']:'';
                     $maps_marker = isset($options['maps_marker'])?$options['maps_marker']:'';
 
-                    if($maps_lat && $maps_lat != ''){
+                    if($maps_lat != ''){
                         $lat = $maps_lat;
                     }
-                    if($maps_lng && $maps_lng != ''){
+                    if($maps_lng != ''){
                         $lang = $maps_lng;
                     }
-                    if($maps_zoom && $maps_zoom != ''){
+                    if($maps_zoom != ''){
                         $zoom = $maps_zoom;
                     }
 
