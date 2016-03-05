@@ -30,6 +30,17 @@ get_header(); ?>
 		padding-left: 5%;
 		padding-right: 5%;
 	}
+	.banner img{
+		width: 100%;
+	}
+	@media screen and (max-width: 900px){
+		.main-404{
+			flex-direction: column-reverse;
+		}
+		.text{
+			text-align: center;
+		}
+	}
 </style>
 <div class="container">
 		<div class="main-404">

@@ -45,7 +45,7 @@
 	?>
 	<header class="header">
 		<div class="container">
-			<div class="header-nav-bar-left">
+			<div class="header-nav-bar-left hidden-xs">
 
 				<nav class="nav__social">
 					<div style="display: inline-block;float: left;">
@@ -116,10 +116,10 @@
 			$logo_url = wp_get_attachment_image_url($logo_uri, 300, 300);
 		}
 		?>
-		<div class="header-logo">
+		<div class="header-logo  hidden-xs">
 			<a href="<?php echo get_home_url(); ?>"><img src="<?php echo esc_url($logo_url);?>" height="222" width="222" alt="logo" title="<?php echo bloginfo('name')?>"></a>
 		</div>
-			<div class="header-nav-bar-right">
+			<div class="header-nav-bar-right  hidden-xs">
 				<?php if(tf_variable_exist($options['contacts_schedule'])):?>
 				<p class="schedule"><?php echo esc_html($options['contacts_schedule']); ?></p>
 				<?php endif; ?>
@@ -151,6 +151,59 @@
 			</div>
 		</div>
 	</header>
+	<!--responsive menu-->
+	<nav class="header-nav hidden-md hidden-lg visible-xs">
+		<input type="checkbox" id="hmt" class="hidden-menu-ticker">
+		<label class="btn-menu" for="hmt">
+			<span class="first"></span>
+			<span class="second"></span>
+			<span class="third"></span>
+		</label>
+		<ul class="hidden-menu">
+			<?php if($options['menu_left_side']): ?>
+				<?php
+				$menu_items = wp_get_nav_menu_items($options['menu_left_side']);
+				$current_page_url = get_permalink();
+
+				if($menu_items):
+					foreach ($menu_items as $item):
+						$active = "";
+						if(strcmp($item->url,$current_page_url ) == 0){
+							$active = 'class="active"';
+						}
+						?>
+						<li>
+							<a <?php echo $active; ?> href="<?php echo esc_url($item->url); ?>"><?php echo esc_html($item->title); ?></a>
+						</li>
+					<?php endforeach;	?>
+					<?php
+				endif;
+			endif;
+			?>
+			<?php if($options['menu_left_side']): ?>
+				<?php
+				$menu_items = wp_get_nav_menu_items($options['menu_right_side']);
+				$current_page_url = get_permalink();
+
+				if($menu_items):
+					foreach ($menu_items as $item):
+						$active = "";
+						if(strcmp($item->url,$current_page_url ) == 0){
+							$active = 'class="active"';
+						}
+						?>
+						<li>
+							<a <?php echo $active; ?> href="<?php echo esc_url($item->url); ?>"><?php echo esc_html($item->title); ?></a>
+						</li>
+					<?php endforeach;	?>
+					<?php
+				endif;
+			endif;
+			?>
+		</ul>
+	</nav>
+
+
 	<?php if(is_front_page()): ?>
 		<section class="slider">
 			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
