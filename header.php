@@ -123,7 +123,7 @@
 				<?php if(tf_variable_exist($options['contacts_schedule'])):?>
 				<p class="schedule"><?php echo esc_html($options['contacts_schedule']); ?></p>
 				<?php endif; ?>
-				<a class="header-check" href="#">Запис онлайн</a>
+				<a class="header-check ms_booking" data-url="https://yclients.com/booking/34027/2/1" href="#">Запис онлайн</a>
 				<nav class="header-nav__right">
 					<ul class="header-nav">
 						<?php if($options['menu_left_side']): ?>
