@@ -25,6 +25,7 @@
                 settings: {
                     item:2,
                     slideMove:1,
+                    controls: false,
                     slideMargin:6
                 }
             },
@@ -32,6 +33,7 @@
                 breakpoint:480,
                 settings: {
                     item:1,
+                    controls: false,
                     slideMove:1
                 }
             }
@@ -59,6 +61,7 @@
                     item:2,
                     slideMove:1,
                     slideMargin:6,
+                    controls: false,
                     pager: true
                 }
             },
@@ -67,6 +70,7 @@
                 settings: {
                     item:1,
                     slideMove:1,
+                    controls: false,
                     pager: true
                 }
             }
