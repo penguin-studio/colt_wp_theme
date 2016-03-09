@@ -51,7 +51,26 @@
     masterWorksSlider.lightSlider({
         item: 5,
         pager: false,
-        slideMargin: 0
+        slideMargin: 0,
+        responsive :[
+            {
+                breakpoint:800,
+                settings: {
+                    item:2,
+                    slideMove:1,
+                    slideMargin:6,
+                    pager: true
+                }
+            },
+            {
+                breakpoint:480,
+                settings: {
+                    item:1,
+                    slideMove:1,
+                    pager: true
+                }
+            }
+        ]
     });
 
     serviceSlider.lightSlider({

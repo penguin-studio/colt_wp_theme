@@ -16,7 +16,7 @@ Template Name: Шаблон страницы Услуги
 <div class="container">
     <div class="row">
         <div class="col-lg-12 col-md-12">
-            <div class="main-blocks col-md-12">
+            <div class="main-blocks col-md-12 services-content">
                 <h2 class="main-blocks__title">Послуги</h2>
                 <div class="row-margin">
                     <div class="col-md-6 row-margin">
@@ -38,7 +38,7 @@ Template Name: Шаблон страницы Услуги
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 row-margin">
+                    <div class="col-md-3 col-xs-9 row-margin">
                         <?php
                         $block_services_2_title = isset($options['block_services_2_title'])?$options['block_services_2_title']:'';
                         $block_services_2_url   = isset($options['block_services_2_url'])?$options['block_services_2_url']:'';
@@ -57,7 +57,7 @@ Template Name: Шаблон страницы Услуги
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 row-margin">
+                    <div class="col-md-3 col-xs-9 row-margin">
                         <?php
                         $block_services_3_title = isset($options['block_services_3_title'])?$options['block_services_3_title']:'';
                         $block_services_3_url   = isset($options['block_services_3_url'])?$options['block_services_3_url']:'';
@@ -76,7 +76,7 @@ Template Name: Шаблон страницы Услуги
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 pull-right">
+                    <div class="col-md-6 pull-right service-item__responsive">
                         <?php
                         $block_services_4_title = isset($options['block_services_4_title'])?$options['block_services_4_title']:'';
                         $block_services_4_url   = isset($options['block_services_4_url'])?$options['block_services_4_url']:'';
@@ -95,7 +95,7 @@ Template Name: Шаблон страницы Услуги
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-xs-9 service-item__responsive">
                         <?php
                         $block_services_5_title = isset($options['block_services_5_title'])?$options['block_services_5_title']:'';
                         $block_services_5_url   = isset($options['block_services_5_url'])?$options['block_services_5_url']:'';
@@ -114,7 +114,7 @@ Template Name: Шаблон страницы Услуги
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-xs-9">
                         <?php
                         $block_services_6_title = isset($options['block_services_6_title'])?$options['block_services_6_title']:'';
                         $block_services_6_url   = isset($options['block_services_6_url'])?$options['block_services_6_url']:'';
@@ -135,7 +135,7 @@ Template Name: Шаблон страницы Услуги
                     </div>
                 </div>
                 <div class="row-margin">
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-xs-9 service-item__responsive">
                         <?php
                         $block_services_7_title = isset($options['block_services_7_title'])?$options['block_services_7_title']:'';
                         $block_services_7_url   = isset($options['block_services_7_url'])?$options['block_services_7_url']:'';
@@ -154,7 +154,7 @@ Template Name: Шаблон страницы Услуги
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 services-item__wrapp service-item__responsive">
                         <?php
                         $block_services_8_title = isset($options['block_services_8_title'])?$options['block_services_8_title']:'';
                         $block_services_8_url   = isset($options['block_services_8_url'])?$options['block_services_8_url']:'';
@@ -173,7 +173,7 @@ Template Name: Шаблон страницы Услуги
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 row-margin">
+                    <div class="col-md-3 col-xs-9 row-margin">
                         <?php
                         $block_services_9_title = isset($options['block_services_9_title'])?$options['block_services_9_title']:'';
                         $block_services_9_url   = isset($options['block_services_9_url'])?$options['block_services_9_url']:'';
@@ -192,7 +192,7 @@ Template Name: Шаблон страницы Услуги
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-xs-9">
                         <?php
                         $block_services_10_title = isset($options['block_services_10_title'])?$options['block_services_10_title']:'';
                         $block_services_10_url   = isset($options['block_services_10_url'])?$options['block_services_10_url']:'';

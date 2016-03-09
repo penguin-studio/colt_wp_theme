@@ -151,58 +151,61 @@
 			</div>
 		</div>
 	</header>
-	<!--responsive menu-->
-	<nav class="header-nav hidden-md hidden-lg visible-xs">
-		<input type="checkbox" id="hmt" class="hidden-menu-ticker">
-		<label class="btn-menu" for="hmt">
-			<span class="first"></span>
-			<span class="second"></span>
-			<span class="third"></span>
-		</label>
-		<ul class="hidden-menu">
-			<?php if($options['menu_left_side']): ?>
-				<?php
-				$menu_items = wp_get_nav_menu_items($options['menu_left_side']);
-				$current_page_url = get_permalink();
+	<div class="responsive__menu">
+	<div class="container">
+        <!--responsive menu-->
+        <nav class="header-nav hidden-md hidden-lg visible-xs">
+            <input type="checkbox" id="hmt" class="hidden-menu-ticker">
+            <label class="btn-menu" for="hmt">
+                <span class="first"></span>
+                <span class="second"></span>
+                <span class="third"></span>
+            </label>
+            <ul class="hidden-menu">
+                <?php if($options['menu_left_side']): ?>
+                    <?php
+                    $menu_items = wp_get_nav_menu_items($options['menu_left_side']);
+                    $current_page_url = get_permalink();
 
-				if($menu_items):
-					foreach ($menu_items as $item):
-						$active = "";
-						if(strcmp($item->url,$current_page_url ) == 0){
-							$active = 'class="active"';
-						}
-						?>
-						<li>
-							<a <?php echo $active; ?> href="<?php echo esc_url($item->url); ?>"><?php echo esc_html($item->title); ?></a>
-						</li>
-					<?php endforeach;	?>
-					<?php
-				endif;
-			endif;
-			?>
-			<?php if($options['menu_left_side']): ?>
-				<?php
-				$menu_items = wp_get_nav_menu_items($options['menu_right_side']);
-				$current_page_url = get_permalink();
+                    if($menu_items):
+                        foreach ($menu_items as $item):
+                            $active = "";
+                            if(strcmp($item->url,$current_page_url ) == 0){
+                                $active = 'class="active"';
+                            }
+                            ?>
+                            <li>
+                                <a <?php echo $active; ?> href="<?php echo esc_url($item->url); ?>"><?php echo esc_html($item->title); ?></a>
+                            </li>
+                        <?php endforeach;	?>
+                        <?php
+                    endif;
+                endif;
+                ?>
+                <?php if($options['menu_left_side']): ?>
+                    <?php
+                    $menu_items = wp_get_nav_menu_items($options['menu_right_side']);
+                    $current_page_url = get_permalink();
 
-				if($menu_items):
-					foreach ($menu_items as $item):
-						$active = "";
-						if(strcmp($item->url,$current_page_url ) == 0){
-							$active = 'class="active"';
-						}
-						?>
-						<li>
-							<a <?php echo $active; ?> href="<?php echo esc_url($item->url); ?>"><?php echo esc_html($item->title); ?></a>
-						</li>
-					<?php endforeach;	?>
-					<?php
-				endif;
-			endif;
-			?>
-		</ul>
-	</nav>
-
+                    if($menu_items):
+                        foreach ($menu_items as $item):
+                            $active = "";
+                            if(strcmp($item->url,$current_page_url ) == 0){
+                                $active = 'class="active"';
+                            }
+                            ?>
+                            <li>
+                                <a <?php echo $active; ?> href="<?php echo esc_url($item->url); ?>"><?php echo esc_html($item->title); ?></a>
+                            </li>
+                        <?php endforeach;	?>
+                        <?php
+                    endif;
+                endif;
+                ?>
+            </ul>
+        </nav>
+    </div>
+    </div>
 
 	<?php if(is_front_page()): ?>
 		<section class="slider">
