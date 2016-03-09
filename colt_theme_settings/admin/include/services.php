@@ -70,7 +70,7 @@ function services_page() {
 
                                     $title = isset($service['title'])?$service['title']:'';
                                     $price = isset($service['price'])?$service['price']:'';
-                                    $url   = isset($service['url'])?get_permalink($service['url']):'#';
+                                    $url   = isset($service['url'])?$service['url']:'#';
 
                                     ?>
                                     <tr id="s<?php echo $key; ?>" class="service">
