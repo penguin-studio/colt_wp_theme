@@ -9,7 +9,6 @@ add_action('after_setup_theme', function(){
 // подключение меню конец
 add_theme_support('post-thumbnails');
 
-
-
 // Подключение настроек темы
 require get_template_directory() . '/colt_theme_settings/colt_theme_settings.php';
+
