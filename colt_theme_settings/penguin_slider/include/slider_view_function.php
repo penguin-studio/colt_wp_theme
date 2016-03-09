@@ -12,7 +12,8 @@
  *      container_start - Внешний контейнеh до вывода списка
  *      conteiner_end - Внешний контейнеh после вывода фото
  *      slider_slug - ярлык слайдера - какой слайдер выводить
- *
+ *      img_size - размер фото
+ * 
  * @return string
  */
 function slider_view($args)
@@ -22,6 +23,7 @@ function slider_view($args)
     $container_start = isset($args['container_start'])?$args['container_start']:'';
     $container_end   = isset($args['container_end'])?$args['container_end']:'';
     $slider_slug     = isset($args['slider_slug'])?$args['slider_slug']:'';
+    $img_size        = isset($args['slider_size'])?$args['img_size']:'full';
 
     global $post;
     global $wp_query;

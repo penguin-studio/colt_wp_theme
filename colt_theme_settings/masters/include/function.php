@@ -48,7 +48,7 @@ function master_template_view_galery($galery_list){
             foreach ($galery_list as $galery_item) {
                 $img_url = "";
                 if($galery_item != ""){
-                    $img_url = wp_get_attachment_image_url($galery_item,300,300);
+                    $img_url = wp_get_attachment_image_url($galery_item,array(300,300));
                 }
                 $galery .= '
                     <li><img src="'.esc_url($img_url).'"></li>

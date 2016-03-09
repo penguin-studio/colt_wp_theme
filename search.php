@@ -14,7 +14,7 @@
                             }
                             ?>
                             <div class="main-blocks col-md-12">
-                                <div class="title"><?php the_title();?></div>
+                                <div class="title"><a href="<?php the_permalink();?>"><?php the_title();?></a></div>
                                 <div class="post-container">
                                     <?php
                                     $args = array(
