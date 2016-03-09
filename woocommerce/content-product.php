@@ -36,10 +36,9 @@ $woocommerce_loop['loop']++;
 
 ?>
 <?php if($woocommerce_loop['loop']%3 == 1):?>
-
+<ul class="other-goods__list card-box">
 <?php endif; ?>
 <li>
-	<b><?php echo $woocommerce_loop['loop'].' '.$woocommerce_loop['loop']%3; ?></b>
 	<?php
 	/**
 	 * woocommerce_before_shop_loop_item hook.
@@ -54,9 +53,11 @@ $woocommerce_loop['loop']++;
 	 * @hooked woocommerce_show_product_loop_sale_flash - 10
 	 * @hooked woocommerce_template_loop_product_thumbnail - 10
 	 */
-
 	do_action( 'woocommerce_before_shop_loop_item_title' );
 
+	?>
+	<div class="bottom-menu">
+	<?php
 	/**
 	 * woocommerce_shop_loop_item_title hook.
 	 *
@@ -80,7 +81,8 @@ $woocommerce_loop['loop']++;
 	 */
 	do_action( 'woocommerce_after_shop_loop_item' );
 	?>
+	</div>
 </li>
 <?php if($woocommerce_loop['loop']%3 == 0):?>
-
+</ul>
 <?php endif; ?>

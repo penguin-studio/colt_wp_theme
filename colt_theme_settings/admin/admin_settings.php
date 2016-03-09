@@ -7,7 +7,7 @@
 
 //Добавление стилей для админки
 function colt_theme_admin_enqueue_options_style() {
-    wp_enqueue_style( 'colt_theme_admin_options_style', colt_theme_settings_directory_uri . '/admin/style/style.css' );
+    wp_enqueue_style( 'colt_theme_admin_options_style', colt_theme_settings_directory_uri . '/admin/css/style.css' );
 }
 add_action( 'admin_enqueue_scripts', 'colt_theme_admin_enqueue_options_style' );
 

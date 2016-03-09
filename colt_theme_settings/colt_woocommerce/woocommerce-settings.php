@@ -20,17 +20,18 @@ function no_title(){return false;}
 //Отключаем добавление в хуке woocommerce_before_shop_loop_item_title
 //функции по выводу картинки поста
 remove_action('woocommerce_before_shop_loop_item_title','woocommerce_template_loop_product_thumbnail');
+//Отключаем вывод ссылки
+remove_action('woocommerce_before_shop_loop_item','woocommerce_template_loop_product_link_open');
+remove_action('woocommerce_after_shop_loop_item','woocommerce_template_loop_product_link_close');
+//Отключаем вывод title
+remove_action('woocommerce_shop_loop_item_title','woocommerce_template_loop_product_title');
 
-add_action('woocommerce_before_shop_loop_item_title','colt_woocommerce_template_loop_product_thumbnail');
 
-function colt_woocommerce_template_loop_product_thumbnail(){
-    global $post;
-    $template = "<img src='%src%' alt='%alt%' />";
-
-    $img_src = get_the_post_thumbnail_url($post->ID,array(280,425));
-    $img_alt = get_the_title($post->ID);
-
-    $template = str_replace('%src%',$img_src,$template);
-    $template = str_replace('%alt%',$img_alt,$template);
-    return print $template;
+//Добавление файла стилей
+function colt_woo_add_style() {
+    wp_enqueue_style( 'colt_woocommerce_style', colt_theme_settings_directory_uri . '/colt_woocommerce/css/style.css' );
 }
+add_action( 'wp_enqueue_scripts', 'colt_woo_add_style' );
+
+
+require colt_theme_settings_directory . '/colt_woocommerce/include/function.php';

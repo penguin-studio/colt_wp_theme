@@ -47,8 +47,8 @@
 		<div class="container">
 			<div class="header-nav-bar-left hidden-xs">
                 <div class="search__form">
-                					<?php get_search_form(); ?>
-                					</div>
+					<?php get_search_form(); ?>
+				</div>
 				<nav class="nav__social">
 
 					<ul class="nav__social-list" style="display: inline-block;">

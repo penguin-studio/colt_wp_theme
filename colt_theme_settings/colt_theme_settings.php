@@ -23,4 +23,4 @@ require colt_theme_settings_directory . '/mail/mail.php';
 require colt_theme_settings_directory . '/include/breadcrumbs.php';
 require colt_theme_settings_directory . '/include/text_function.php';
 
-require colt_theme_settings_directory . '/woocommerce-settings.php';
+require colt_theme_settings_directory . '/colt_woocommerce/woocommerce-settings.php';
