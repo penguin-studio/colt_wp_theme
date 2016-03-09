@@ -63,10 +63,11 @@
                         </nav>
                         <div class="faq">
                             <a href="#">FAQ</a>
-                            <a class="footer-question" href="#">Задать вопрос</a>
+                            <a class="footer-question" data-toggle="modal" data-target="#questionModal" href="#">Задать вопрос</a>
                         </div>
                     </div>
                 </div>
+
             </footer>
         </div>
     </section>
@@ -74,6 +75,34 @@
     <?php
     $theme_path_uri = get_template_directory_uri()
     ?>
+<!-- modal -->
+                    <div class="modal fade" id="questionModal" tabindex="-1" role="dialog">
+                    	<div class="modal-dialog">
+                    		<div class="modal-content">
+                    			<div class="modal-header">
+                    				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    			</div>
+                    			<div class="modal-body">
+                    				<form class="request request-franchise" action="" method="post">
+                    					<h3>Задати питання</h3>
+                    					<div class="row">
+                    						<div class="col-md-6">
+                    							<input type="text" placeholder="Ім’я*" required="">
+                    							<input type="text" placeholder="Телефон*" required="">
+                    							<input type="text" placeholder="E-mail*" required="">
+                    						</div>
+                    						<div class="col-md-6">
+                    							<textarea placeholder="Запитання"></textarea>
+                    						</div>
+                    					</div>
+                    					<div class="wrapp-check-online">
+                    						<input class="check-online btn-submit" type="submit" value="Надіслати">
+                    					</div>
+                    				</form>
+                    			</div>
+                    		</div>
+                    	</div>
+                    </div>
     <!-- script -->
     <script type="text/javascript" src="https://w15352.yclients.com/widgetJS" charset="UTF-8"></script>
     <script src="<?php echo esc_url($theme_path_uri); ?>/js/jquery.min.js"></script>
