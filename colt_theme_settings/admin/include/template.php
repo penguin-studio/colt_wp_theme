@@ -168,6 +168,12 @@ function theme_settings_page() {
                                 $social_instagram_url = isset($options['social_instagram_url'])?$options['social_instagram_url']:'';
                                 $social_twitter_visible = isset($options['social_twitter_visible'])?$options['social_twitter_visible']:'';
                                 $social_twitter_url = isset($options['social_twitter_url'])?$options['social_twitter_url']:'';
+                                $social_youtube_url = isset($options['social_youtube_url'])?$options['social_youtube_url']:'';
+                                $social_youtube_visible = isset($options['social_youtube_visible'])?$options['social_youtube_visible']:'';
+                                $social_pinterest_url = isset($options['social_pinterest_url'])?$options['social_pinterest_url']:'';
+                                $social_pinterest_visible = isset($options['social_pinterest_visible'])?$options['social_pinterest_visible']:'';
+                                $social_periscope_url = isset($options['social_periscope_url'])?$options['social_periscope_url']:'';
+                                $social_periscope_visible = isset($options['social_periscope_visible'])?$options['social_periscope_visible']:'';
 
                                 ?>
                                 <tr>
@@ -189,6 +195,21 @@ function theme_settings_page() {
                                     <td>Twitter</td>
                                     <td><input type="checkbox" name="theme_settings[social_twitter_visible]" value="1" <?php checked($social_twitter_visible,'1'); ?>></td>
                                     <td><input type="text" name="theme_settings[social_twitter_url]" value="<?php echo esc_attr($social_twitter_url); ?>" style="width: 400px;" ></td>
+                                </tr>
+                                <tr>
+                                    <td>Youtube</td>
+                                    <td><input type="checkbox" name="theme_settings[social_youtube_visible]" value="1" <?php checked($social_youtube_visible,'1'); ?>></td>
+                                    <td><input type="text" name="theme_settings[social_youtube_url]" value="<?php echo esc_attr($social_youtube_url); ?>" style="width: 400px;" ></td>
+                                </tr>
+                                <tr>
+                                    <td>Pinterest</td>
+                                    <td><input type="checkbox" name="theme_settings[social_pinterest_visible]" value="1" <?php checked($social_pinterest_visible,'1'); ?>></td>
+                                    <td><input type="text" name="theme_settings[social_pinterest_url]" value="<?php echo esc_attr($social_pinterest_url); ?>" style="width: 400px;" ></td>
+                                </tr>
+                                <tr>
+                                    <td>Periscope</td>
+                                    <td><input type="checkbox" name="theme_settings[social_periscope_visible]" value="1" <?php checked($social_periscope_visible,'1'); ?>></td>
+                                    <td><input type="text" name="theme_settings[social_periscope_url]" value="<?php echo esc_attr($social_periscope_url); ?>" style="width: 400px;" ></td>
                                 </tr>
                             </table>
                         </section>

@@ -34,7 +34,7 @@ add_action( 'wp_enqueue_scripts', 'child_manage_woocommerce_styles', 99 );
 
 function child_manage_woocommerce_styles() {
     //убираем generator meta tag
-    remove_action( 'wp_head', array( $GLOBALS['woocommerce'], 'generator' ) );
+    remove_action( 'wp_head', array( isset($GLOBALS['woocommerce'])?$GLOBALS['woocommerce']:'', 'generator' ) );
 
     //для начала проверяем, активен ли WooCommerce, дабы избежать ошибок
     if ( function_exists( 'is_woocommerce' ) ) {
@@ -58,7 +58,6 @@ function child_manage_woocommerce_styles() {
             wp_dequeue_script( 'prettyPhoto-init' );
             wp_dequeue_script( 'jquery-blockui' );
             wp_dequeue_script( 'jquery-placeholder' );
-            wp_dequeue_script( 'fancybox' );
             wp_dequeue_script( 'jqueryui' );
         }
     }

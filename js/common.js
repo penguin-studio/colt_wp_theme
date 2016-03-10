@@ -14,7 +14,6 @@
         $('body,html').animate({scrollTop: top}, 1000);
         return false;
     });
-
     lightSlider.lightSlider({
         item: 4,
         pager: false,
@@ -49,7 +48,6 @@
         item: 3,
         controls: false
     });
-
     masterWorksSlider.lightSlider({
         item: 5,
         pager: false,
@@ -76,7 +74,6 @@
             }
         ]
     });
-
     serviceSlider.lightSlider({
         item: 1,
         controls: false

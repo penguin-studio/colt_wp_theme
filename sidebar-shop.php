@@ -1,9 +1,8 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Эзиз
+ * User: Максим Руденко
  * Date: 10.03.2016
- * Time: 0:14
+ * Сайдбар магазина
  */
 ?>
 <div>

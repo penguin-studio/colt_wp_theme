@@ -46,12 +46,18 @@ function master_template_view_galery($galery_list){
 
             $galery = "";
             foreach ($galery_list as $galery_item) {
-                $img_url = "";
+                $img_url  = "";
+                $img_full = "";
                 if($galery_item != ""){
-                    $img_url = wp_get_attachment_image_url($galery_item,array(300,300));
+                    $img_url  = wp_get_attachment_image_url($galery_item,array(300,300));
+                    $img_full = wp_get_attachment_image_url($galery_item,'full');
                 }
                 $galery .= '
-                    <li><img src="'.esc_url($img_url).'"></li>
+                    <li>
+                        <a href="'.esc_url($img_full).'" class="fancybox" rel="fancybox" title="">
+                        <img src="'.esc_url($img_url).'">
+                        </a>
+                    </li>
                  ';
 
             }

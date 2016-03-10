@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2016 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="periscope-2" unicode="&#xe800;" d="M742 416c0-174-187-365-234-365s-233 191-233 365c0 128 104 233 233 233s234-105 234-233z m-234 140c-11 0-22-1-32-3 19-10 32-29 32-52 0-31-26-57-57-57-31 0-56 24-57 54-17-24-27-52-27-83 0-79 63-142 141-142 79 0 142 64 142 142s-63 141-142 141z" horiz-adv-x="1017" />
+</font>
+</defs>
+</svg>

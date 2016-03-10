@@ -40,7 +40,12 @@
                                 $social_instagram_url = isset($options['social_instagram_url'])?$options['social_instagram_url']:'';
                                 $social_twitter_visible = isset($options['social_twitter_visible'])?$options['social_twitter_visible']:'';
                                 $social_twitter_url = isset($options['social_twitter_url'])?$options['social_twitter_url']:'';
-
+                                $social_youtube_url = isset($options['social_youtube_url'])?$options['social_youtube_url']:'';
+                                $social_youtube_visible = isset($options['social_youtube_visible'])?$options['social_youtube_visible']:'';
+                                $social_pinterest_url = isset($options['social_pinterest_url'])?$options['social_pinterest_url']:'';
+                                $social_pinterest_visible = isset($options['social_pinterest_visible'])?$options['social_pinterest_visible']:'';
+                                $social_periscope_url = isset($options['social_periscope_url'])?$options['social_periscope_url']:'';
+                                $social_periscope_visible = isset($options['social_periscope_visible'])?$options['social_periscope_visible']:'';
                                 ?>
 
                                 <?php if($social_vk_visible && $social_vk_visible == '1' &&
@@ -59,6 +64,18 @@
                                     $social_twitter_url != ''):?>
                                     <li><a class="fa fa-twitter" href="<?php echo esc_url($social_twitter_url);?>"></a></li>
                                 <?php endif; ?>
+                                <?php if( $social_youtube_visible && $social_youtube_visible == '1' &&
+                                    $social_youtube_url != ''):?>
+                                    <li><a class="fa fa-youtube" href="<?php echo esc_url($social_youtube_url);?>"></a></li>
+                                <?php endif; ?>
+                                <?php if( $social_pinterest_visible && $social_pinterest_visible == '1' &&
+                                    $social_pinterest_url != ''):?>
+                                    <li><a class="fa fa-pinterest" href="<?php echo esc_url($social_pinterest_url);?>"></a></li>
+                                <?php endif; ?>
+                                <?php if( $social_periscope_visible && $social_periscope_visible == '1' &&
+                                    $social_periscope_url != ''):?>
+                                    <li><a class="icon-periscope-2" href="<?php echo esc_url($social_periscope_url);?>"></a></li>
+                                <?php endif; ?>
                             </ul>
                         </nav>
                         <div class="faq">
@@ -71,7 +88,7 @@
             </footer>
         </div>
     </section>
-    <?php  wp_footer();?>
+
     <?php
     $theme_path_uri = get_template_directory_uri()
     ?>
@@ -104,9 +121,9 @@
                     	</div>
                     </div>
     <!-- script -->
+
     <script type="text/javascript" src="https://w15352.yclients.com/widgetJS" charset="UTF-8"></script>
-    <script src="<?php echo esc_url($theme_path_uri); ?>/js/jquery.min.js"></script>
-    <script src="<?php echo esc_url($theme_path_uri); ?>/js/lightslider.js"></script>
+    
     <script src="<?php echo esc_url($theme_path_uri); ?>/js/common.js"></script>
     <script src="<?php echo esc_url($theme_path_uri); ?>/js/bootstrap.min.js"></script>
     <script type="text/javascript" charset="utf-8">
@@ -119,6 +136,7 @@
     <?php if(is_front_page()):?>
         <script src="<?php echo esc_url($theme_path_uri); ?>/js/maps.js"></script>
     <?php endif; ?>
+    <?php  wp_footer();?>
     <!-- script end -->
     </body>
 </html>

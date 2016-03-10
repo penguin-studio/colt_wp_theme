@@ -27,6 +27,9 @@
 	<link rel="stylesheet" href="<?php echo esc_url($theme_path_uri); ?>/css/lightslider.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<!-- style end -->
+	<script src="<?php echo esc_url($theme_path_uri); ?>/js/jquery.min.js"></script>
+	<script src="<?php echo esc_url($theme_path_uri); ?>/js/lightslider.js"></script>
+	
 	<?php wp_head(); ?>
 	<?php
 		/**
@@ -62,7 +65,12 @@
 						$social_instagram_url = isset($options['social_instagram_url'])?$options['social_instagram_url']:'';
 						$social_twitter_visible = isset($options['social_twitter_visible'])?$options['social_twitter_visible']:'';
 						$social_twitter_url = isset($options['social_twitter_url'])?$options['social_twitter_url']:'';
-
+						$social_youtube_url = isset($options['social_youtube_url'])?$options['social_youtube_url']:'';
+						$social_youtube_visible = isset($options['social_youtube_visible'])?$options['social_youtube_visible']:'';
+						$social_pinterest_url = isset($options['social_pinterest_url'])?$options['social_pinterest_url']:'';
+						$social_pinterest_visible = isset($options['social_pinterest_visible'])?$options['social_pinterest_visible']:'';
+						$social_periscope_url = isset($options['social_periscope_url'])?$options['social_periscope_url']:'';
+						$social_periscope_visible = isset($options['social_periscope_visible'])?$options['social_periscope_visible']:'';
 						?>
 
 						<?php if($social_vk_visible && $social_vk_visible == '1' &&
@@ -80,6 +88,18 @@
 						<?php if( $social_twitter_visible && $social_twitter_visible == '1' &&
 							$social_twitter_url != ''):?>
 							<li><a class="fa fa-twitter" href="<?php echo esc_url($social_twitter_url);?>"></a></li>
+						<?php endif; ?>
+						<?php if( $social_youtube_visible && $social_youtube_visible == '1' &&
+							$social_youtube_url != ''):?>
+							<li><a class="fa fa-youtube" href="<?php echo esc_url($social_youtube_url);?>"></a></li>
+						<?php endif; ?>
+						<?php if( $social_pinterest_visible && $social_pinterest_visible == '1' &&
+							$social_pinterest_url != ''):?>
+							<li><a class="fa fa-pinterest" href="<?php echo esc_url($social_pinterest_url);?>"></a></li>
+						<?php endif; ?>
+						<?php if( $social_periscope_visible && $social_periscope_visible == '1' &&
+							$social_periscope_url != ''):?>
+							<li><a class="icon-periscope-2" href="<?php echo esc_url($social_periscope_url);?>"></a></li>
 						<?php endif; ?>
 					</ul>
 				</nav>
