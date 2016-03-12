@@ -57,7 +57,7 @@
 			                <?php echo master_template_view_galery($master_galery); ?>
 		                </ul>
 		                <div class="wrapp-check-online">
-			                <a class="check-online ms_booking" data-url="https://yclients.com/booking/34027/2/1" href="#">Запис онлайн</a>
+			                <a class="check-online ms_booking" data-url="https://yclients.com/booking/34027/2/1" href="#" onClick="ga('send', 'event', { eventCategory: 'запись онлайн', eventAction: 'заказ'});">Запис онлайн</a>
 		                </div>
 	                </div>
             </div>

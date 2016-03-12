@@ -29,6 +29,7 @@
 	<!-- style end -->
 	<script src="<?php echo esc_url($theme_path_uri); ?>/js/jquery.min.js"></script>
 	<script src="<?php echo esc_url($theme_path_uri); ?>/js/lightslider.js"></script>
+
 	
 	<?php wp_head(); ?>
 	<?php
@@ -37,6 +38,17 @@
 		 */
 		do_action('before_head_close');
 	?>
+	<!--GoogleAnalyticsObject-->
+	<script>
+               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+               m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+               })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+               ga('create', 'UA-74992501-1', 'auto');
+               ga('send', 'pageview');
+
+     </script>
 </head>
 <body>
 
@@ -143,7 +155,7 @@
 				<?php if(tf_variable_exist($options['contacts_schedule'])):?>
 				<p class="schedule"><?php echo esc_html($options['contacts_schedule']); ?></p>
 				<?php endif; ?>
-				<a class="header-check ms_booking" data-url="https://yclients.com/booking/34027/2/1" href="#">Запис онлайн</a>
+				<a class="header-check ms_booking" data-url="https://yclients.com/booking/34027/2/1" href="#">Запись онлайн</a>
 				<nav class="header-nav__right">
 					<ul class="header-nav">
 						<?php if($options['menu_left_side']): ?>

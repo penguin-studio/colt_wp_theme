@@ -36,11 +36,11 @@ if ($wp_query->have_posts()){
                                 <div class="col-md-6">
                                     <img src="'.$img_url.'" alt="master">
                                 </div>
-                                <div class="col-md-6 enter-personal-page">
+                                <a href="'.esc_url($master_page_url).'" class="col-md-6 enter-personal-page">
                                     <h3 class="enter-personal-page__title">'.esc_html($master_name).'</h3>
                                     <span class="enter-personal-page__logo"></span>
-                                    <a class="enter-personal-page__link" href="'.esc_url($master_page_url).'">переглянути профіль</a>
-                                </div>
+                                    <span class="enter-personal-page__link">переглянути профіль</span>
+                                </a>
 		                    </div>
                             ';
         $result .= $res;

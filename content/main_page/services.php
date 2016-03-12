@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-lg-12 col-md-12">
             <div class="main-blocks about-us col-md-12">
-                <h2 class="main-blocks__title">Послуги</h2>
+                <h2 class="main-blocks__title">Услуги:</h2>
                 <div class="col-md-6 col-md-offset-3">
                     <table class="table-responsive">
                         <?php
@@ -30,7 +30,7 @@
                         ?>
                     </table>
                     <div class="wrapp-check-online">
-                        <a class="check-online ms_booking" data-url="https://yclients.com/booking/34027/2/1" href="#">Запис онлайн</a>
+                        <a class="check-online ms_booking" data-url="https://yclients.com/booking/34027/2/1" href="#" onClick="ga('send', 'event', { eventCategory: 'запись онлайн', eventAction: 'заказ'});">Запись онлайн</a>
                     </div>
                 </div>
             </div>

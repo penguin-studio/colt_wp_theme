@@ -17,7 +17,7 @@ Template Name: Шаблон страницы Услуги
     <div class="row">
         <div class="col-lg-12 col-md-12">
             <div class="main-blocks col-md-12 services-content">
-                <h2 class="main-blocks__title">Послуги</h2>
+                <h2 class="main-blocks__title">Услуги:</h2>
                 <div class="row-margin">
                     <div class="col-md-6 row-margin">
                         <?php

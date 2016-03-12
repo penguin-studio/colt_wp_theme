@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col-lg-12 col-md-12">
             <div class="main-blocks barber-masters col-md-12">
-                <h2 class="main-blocks__title">Барбер майстри</h2>
+                <h2 class="main-blocks__title">Барбер мастера:</h2>
                 <div class="barber-slider">
                     <ul class="lightSlider card-box">
                     <?php
@@ -66,7 +66,7 @@
                     </ul>
                 </div>
                 <div class="wrapp-check-online">
-                    <a class="check-online ms_booking" data-url="https://yclients.com/booking/34027/2/1" href="#">Запис онлайн</a>
+                    <a class="check-online ms_booking" data-url="https://yclients.com/booking/34027/2/1" href="#" onClick="ga('send', 'event', { eventCategory: 'запись онлайн', eventAction: 'заказ'});">Запись онлайн</a>
                 </div>
             </div>
         </div>

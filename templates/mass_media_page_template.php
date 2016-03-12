@@ -13,7 +13,7 @@ Template Name: Шаблон страницы ЗМІ про нас
     <div class="row">
         <div class="col-lg-12 col-md-12">
             <div class="main-blocks col-md-12">
-                <h2 class="main-blocks__title">ЗМІ про нас</h2>
+                <h2 class="main-blocks__title">СМИ про нас:</h2>
                 <div class="row">
                     <?php get_template_part('content/loop/mass_media_page'); ?>
                 </div>
