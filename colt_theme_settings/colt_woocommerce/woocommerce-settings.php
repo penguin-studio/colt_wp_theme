@@ -33,6 +33,16 @@ remove_action('woocommerce_shop_loop_item_title','woocommerce_template_loop_prod
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
 
+//Работа с single-page продуктов
+//заголовок
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
+//Табы
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50 );
+//related products
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 
 
 //Добавление файла стилей

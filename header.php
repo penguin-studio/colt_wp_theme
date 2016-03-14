@@ -271,9 +271,22 @@
 	<?php endif; ?>
 	<section class="main">
 		<div class="container ">
-			<?php if(!is_front_page()): ?>
-			<div class="breadcrumb" style="background-color: #dfdfe2;">
+
+			<?php if(!is_front_page() && ($post->post_type != 'product')): ?>
+				<div class="breadcrumb" style="background-color: #dfdfe2;">
 				<?php echo breadcrumbs(' » '); ?>
-			</div>
+				</div>
 			<?php endif; ?>
+
+			<?php if($post->post_type == 'product'): ?>
+				<div class="breadcrumb" style="background-color: #dfdfe2;">
+				<?php
+				$args = array(
+					'delimiter'   => '»'
+				);
+					echo woocommerce_breadcrumb($args);
+				?>
+				</div>
+			<?php endif; ?>
+
 		</div>

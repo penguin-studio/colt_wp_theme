@@ -65,6 +65,7 @@ function child_manage_woocommerce_styles() {
 }
 add_filter( 'add_to_cart_text', 'woo_custom_product_add_to_cart_text' );            // < 2.1
 add_filter( 'woocommerce_product_add_to_cart_text', 'woo_custom_product_add_to_cart_text' );  // 2.1 +
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'woo_custom_product_add_to_cart_text' );
 
 function woo_custom_product_add_to_cart_text() {
 
