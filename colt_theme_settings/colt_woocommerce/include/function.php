@@ -72,3 +72,20 @@ function woo_custom_product_add_to_cart_text() {
     return __( 'Купити', 'woocommerce' );
 
 }
+function woocommerce_get_cat_url(){
+    $args = array(
+        'type'                     => 'product',
+        'hide_empty'               => 0,
+        'hierarchical'             => 0,
+        'taxonomy'                 => 'product_cat',
+        'pad_counts'               => false
+    );
+    $links = array();
+    $categories = get_categories( $args );
+    if( $categories ){
+        foreach( $categories as $cat ):
+            array_push($links, array('url'=>get_term_link( $cat->slug, 'product_cat' ),'name'=>$cat->name));
+        endforeach;
+    }
+    return $links;
+}
