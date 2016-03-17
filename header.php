@@ -155,6 +155,7 @@
 				<?php if(tf_variable_exist($options['contacts_schedule'])):?>
 				<p class="schedule"><?php echo esc_html($options['contacts_schedule']); ?></p>
 				<?php endif; ?>
+				<p class="check-by-phone">Запись по телефону: 098-7-931-931</p>
 				<a class="header-check ms_booking" data-url="https://yclients.com/booking/34027/2/1" href="#">Запись онлайн</a>
 				<nav class="header-nav__right">
 					<ul class="header-nav">
@@ -271,9 +272,22 @@
 	<?php endif; ?>
 	<section class="main">
 		<div class="container ">
-			<?php if(!is_front_page()): ?>
-			<div class="breadcrumb" style="background-color: #dfdfe2;">
+
+			<?php if(!is_front_page() && ($post->post_type != 'product')): ?>
+				<div class="breadcrumb" style="background-color: #dfdfe2;">
 				<?php echo breadcrumbs(' » '); ?>
-			</div>
+				</div>
 			<?php endif; ?>
+
+			<?php if($post->post_type == 'product'): ?>
+				<div class="breadcrumb" style="background-color: #dfdfe2;">
+				<?php
+				$args = array(
+					'delimiter'   => '»'
+				);
+					echo woocommerce_breadcrumb($args);
+				?>
+				</div>
+			<?php endif; ?>
+
 		</div>

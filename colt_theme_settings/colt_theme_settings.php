@@ -24,3 +24,5 @@ require colt_theme_settings_directory . '/include/breadcrumbs.php';
 require colt_theme_settings_directory . '/include/text_function.php';
 
 require colt_theme_settings_directory . '/colt_woocommerce/woocommerce-settings.php';
+
+require colt_theme_settings_directory . '/colt_comments/colt_comments.php';
