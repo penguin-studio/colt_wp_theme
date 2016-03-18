@@ -11,14 +11,16 @@ $post_thumbnail_url = get_the_post_thumbnail_url($post->ID, 'master-full-screen'
 $post_content   = get_the_content();
 $post_title     = get_the_title($post->ID);
 
-$next_post_link_text = 'Наступна стаття';
-$prev_post_link_text = 'Попередня стаття';
+$next_post_link_text = 'Следующая статья';
+$prev_post_link_text = 'Предыдущая статья';
+
+
 ?>
 <div class="container">
     <div class="row">
         <div class="col-lg-12 col-md-12">
             <div class="main-blocks col-md-12">
-                <h2 class="main-blocks__title">Як ми відкривались</h2>
+                <h2 class="main-blocks__title"><?php echo get_the_title() ?></h2>
                 <?php if($post_thumbnail_url != ''): ?>
                 <div class="row">
                     <div class="col-md-12 blog-post-container">
