@@ -46,7 +46,11 @@
                                     <div class="bottom-menu">
                                         <h4 class="bottom-menu__name">'.esc_html($master_name).'</h4>
                                         <p class="bottom-menu__name-desc">Тату мастер</p>
+<<<<<<< HEAD
                                         <a class="bottom-menu__link" href="'.esc_url($master_page_url).'">Просмотреть профиль</a>
+=======
+                                        <a class="bottom-menu__link" href="'.esc_url($master_page_url).'">Переглянути профіль</a>
+>>>>>>> 4212874c6093d996ea61d6a95fd77e77468a6374
                                     </div>
                                 </div>
                             </li>
