@@ -16,8 +16,12 @@ get_template_part('content/main_page/barber');
 get_template_part('content/main_page/tattoo');
 ?>
 <div class="hidden-sm hidden-xs separator-line"></div>
+  <?php
+  get_template_part('content/main_page/services');
+?>
+<div class="hidden-sm hidden-xs separator-line"></div>
 <?php
-get_template_part('content/main_page/services');
+get_template_part('content/main_page/video');
 ?>
 <div class="hidden-sm hidden-xs separator-line"></div>
 <?php

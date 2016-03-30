@@ -20,7 +20,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
 
     <div class="woocommerce-variation-price">
+        <p class="catalogue-item__buy-price">
         {{{ data.variation.price_html }}}
+        </p>
     </div>
 
     <div class="woocommerce-variation-availability">

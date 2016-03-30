@@ -8,7 +8,9 @@
         <div class="row">
             <div class="col-lg-12 col-md-12">
                 <div class="main-blocks about-us col-md-12">
-                    <h2 class="main-blocks__title">Контакты:</h2>
+                <h2 class="main-blocks__title">Контакты:</h2>
+                <div class="col-md-6">
+
                     <?php
                     $options = get_option( 'theme_settings' );
 
@@ -39,6 +41,10 @@
                     ?>
                     <div class="map-wrapp" id="map" lat="<?php echo esc_attr($lat); ?>" lang="<?php echo esc_attr($lang); ?>" zoom="<?php echo esc_attr($zoom); ?>" marker="<?php echo esc_attr($marker_url); ?>" style="width: 100%; height: 300px;"></div>
                     <script src="https://maps.googleapis.com/maps/api/js" async defer></script>
+                </div>
+                <div class="col-md-6">
+                    <p>Координаты Barbershop & Tattoo "Mr. Colt":</p> <p>Киев, Соломенский р-н (р-н ЖД Вокзала, станция метро "Вокзальная"), возле ТРЦ "Ультрамарин", клуб "Indigo", ул. Кудряшова, 5</p><p> (между кальянной "The Glass" и Мебельным магазином).</p>
+                </div>
                 </div>
             </div>
         </div>

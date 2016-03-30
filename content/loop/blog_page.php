@@ -53,7 +53,7 @@ $res = '
         <div class="blog-post-container__text">
             <h3 class="blog-post-container__text-title">'.esc_html($post_title).'</h3>
                 '.$post_excerpt.'
-            <a href="'.esc_url($post_url).'" class="blog-post-container__text-link">Читати далі</a>
+            <a href="'.esc_url($post_url).'" class="blog-post-container__text-link">Читать дальше</a>
         </div>
     </div>
 </div>

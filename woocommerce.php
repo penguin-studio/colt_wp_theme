@@ -10,8 +10,9 @@
     <div class="row">
         <div class="col-lg-12 col-md-12">
             <div class="main-blocks col-md-12">
+                <h1 class="main-blocks__title"><?php woocommerce_page_title(); ?></h1>
                 <aside class="col-md-3">
-                    <?php get_sidebar('shops');?>
+                    <?php  get_sidebar('shop');?>
                 </aside>
                 <section class="col-md-9">
                     <?php /* The loop */ ?>

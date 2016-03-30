@@ -4,6 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="cmsmagazine" content="58666b727c9a8fb51fe902c422da78cb" />
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<?php
 			global $wp_query;
@@ -58,8 +59,8 @@
 		 */
 		do_action('before_head_close');
 	?>
-	<header class="header">
-		<div class="container">
+	<header class="header cbp-af-header">
+		<div class="container cbp-af-inner">
 			<div class="header-nav-bar-left hidden-xs">
                 <div class="search__form">
 					<?php get_search_form(); ?>
@@ -155,6 +156,7 @@
 				<?php if(tf_variable_exist($options['contacts_schedule'])):?>
 				<p class="schedule"><?php echo esc_html($options['contacts_schedule']); ?></p>
 				<?php endif; ?>
+				<p class="check-by-phone">Запись по телефону: 098-7-931-931</p>
 				<a class="header-check ms_booking" data-url="https://yclients.com/booking/34027/2/1" href="#">Запись онлайн</a>
 				<nav class="header-nav__right">
 					<ul class="header-nav">
@@ -271,9 +273,22 @@
 	<?php endif; ?>
 	<section class="main">
 		<div class="container ">
-			<?php if(!is_front_page()): ?>
-			<div class="breadcrumb" style="background-color: #dfdfe2;">
+
+			<?php if(!is_front_page() && ($post->post_type != 'product')): ?>
+				<div class="breadcrumb" style="background-color: #dfdfe2;">
 				<?php echo breadcrumbs(' » '); ?>
-			</div>
+				</div>
 			<?php endif; ?>
+
+			<?php if($post->post_type == 'product'): ?>
+				<div class="breadcrumb" style="background-color: #dfdfe2;">
+				<?php
+				$args = array(
+					'delimiter'   => '»'
+				);
+					echo woocommerce_breadcrumb($args);
+				?>
+				</div>
+			<?php endif; ?>
+
 		</div>

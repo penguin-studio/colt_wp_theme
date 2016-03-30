@@ -14,6 +14,7 @@
         $('body,html').animate({scrollTop: top}, 1000);
         return false;
     });
+
     lightSlider.lightSlider({
         item: 4,
         pager: false,
@@ -24,7 +25,6 @@
                 settings: {
                     item:2,
                     slideMove:1,
-                    controls: false,
                     slideMargin:6
                 }
             },
@@ -32,7 +32,6 @@
                 breakpoint:480,
                 settings: {
                     item:1,
-                    controls: false,
                     slideMove:1
                 }
             }
@@ -48,34 +47,34 @@
         item: 3,
         controls: false
     });
+
     masterWorksSlider.lightSlider({
         item: 5,
         pager: false,
-        slideMargin: 0,
-        responsive :[
-            {
-                breakpoint:800,
-                settings: {
-                    item:2,
-                    slideMove:1,
-                    slideMargin:6,
-                    controls: false,
-                    pager: true
-                }
-            },
-            {
-                breakpoint:480,
-                settings: {
-                    item:1,
-                    slideMove:1,
-                    controls: false,
-                    pager: true
-                }
-            }
-        ]
+        slideMargin: 0
     });
+
     serviceSlider.lightSlider({
         item: 1,
         controls: false
-    })
+    });
+
+    var toggleclass = $('.model-list li');
+
+    toggleclass.on('click',function(){
+        if( toggleclass.hasClass('active')){
+            $(this).removeClass('active')
+        }else{
+            $(this).toggleClass('active')
+        }
+    });
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 800){
+            $('header').addClass("sticky");
+        }
+        else{
+            $('header').removeClass("sticky");
+        }
+    });
 })();

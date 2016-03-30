@@ -39,7 +39,7 @@ if ($wp_query->have_posts()){
                                 <a href="'.esc_url($master_page_url).'" class="col-md-6 enter-personal-page">
                                     <h3 class="enter-personal-page__title">'.esc_html($master_name).'</h3>
                                     <span class="enter-personal-page__logo"></span>
-                                    <span class="enter-personal-page__link">переглянути профіль</span>
+                                    <span class="enter-personal-page__link">просомотреть профиль</span>
                                 </a>
 		                    </div>
                             ';

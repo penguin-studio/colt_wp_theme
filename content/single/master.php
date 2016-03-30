@@ -52,12 +52,12 @@
 		                </div>
 	                </div>
 	                <div class="row">
-		                <h3 class="main-blocks__title main-blocks__title-desc">Роботи майстра</h3>
+		                <h3 class="main-blocks__title main-blocks__title-desc">Работы мастера</h3>
 		                <ul class="master-works">
 			                <?php echo master_template_view_galery($master_galery); ?>
 		                </ul>
 		                <div class="wrapp-check-online">
-			                <a class="check-online ms_booking" data-url="https://yclients.com/booking/34027/2/1" href="#" onClick="ga('send', 'event', { eventCategory: 'запись онлайн', eventAction: 'заказ'});">Запис онлайн</a>
+			                <a class="check-online ms_booking" data-url="https://yclients.com/booking/34027/2/1" href="#" onClick="ga('send', 'event', { eventCategory: 'запись онлайн', eventAction: 'заказ'});">Запись онлайн</a>
 		                </div>
 	                </div>
             </div>

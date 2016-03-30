@@ -45,8 +45,8 @@
                                     <img src="'.$img_url.'">
                                     <div class="bottom-menu">
                                         <h4 class="bottom-menu__name">'.esc_html($master_name).'</h4>
-                                        <p class="bottom-menu__name-desc">Барбер майстер</p>
-                                        <a class="bottom-menu__link" href="'.esc_url($master_page_url).'">Переглянути профіль</a>
+                                        <p class="bottom-menu__name-desc">Тату мастер</p>
+                                        <a class="bottom-menu__link" href="'.esc_url($master_page_url).'">Просмотреть профиль</a>
                                     </div>
                                 </div>
                             </li>

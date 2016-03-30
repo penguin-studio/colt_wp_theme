@@ -101,19 +101,19 @@
                     			</div>
                     			<div class="modal-body">
                     				<form class="request request-franchise" action="" method="post">
-                    					<h3>Задати питання</h3>
+                    					<h3>Задать вопрос</h3>
                     					<div class="row">
                     						<div class="col-md-6">
-                    							<input type="text" placeholder="Ім’я*" required="">
+                    							<input type="text" placeholder="Имя*" required="">
                     							<input type="text" placeholder="Телефон*" required="">
                     							<input type="text" placeholder="E-mail*" required="">
                     						</div>
                     						<div class="col-md-6">
-                    							<textarea placeholder="Запитання"></textarea>
+                    							<textarea placeholder="Вопрос"></textarea>
                     						</div>
                     					</div>
                     					<div class="wrapp-check-online">
-                    						<input class="check-online btn-submit" type="submit" value="Надіслати">
+                    						<input class="check-online btn-submit" type="submit" value="Отправить">
                     					</div>
                     				</form>
                     			</div>

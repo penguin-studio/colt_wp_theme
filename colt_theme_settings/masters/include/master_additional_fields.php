@@ -155,7 +155,7 @@ function master_content_save ( $post_id ) {
         update_post_meta($post->ID,'_master_first_name', sanitize_text_field($_POST['master_first_name']));
         update_post_meta($post->ID,'_master_second_name', sanitize_text_field($_POST['master_second_name']));
         update_post_meta($post->ID,'_master_quote', sanitize_text_field($_POST['master_quote']));
-        update_post_meta($post->ID,'_master_content', sanitize_text_field($_POST['master_content']));
+        update_post_meta($post->ID,'_master_content', $_POST['master_content']);
 
         update_post_meta($post->ID,'_master_galery', $_POST['master_galery']);
     }
